@@ -1,0 +1,49 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	66% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.tip {
+	position: fixed;
+	color: white;
+	z-index: 1000;
+	user-select: none;
+	pointer-events: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	animation: fadeIn 3s ease-in-out;
+	// border: 1px solid black;
+}
+.tip_text {
+	width: 66%;
+	font-weight: 300 !important;
+	font-size: 12px;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	line-height: 1.25rem;
+	color: #000;
+}
+// desktop
+@media (min-width: 768px) {
+	.tip {
+		bottom: 2rem;
+	}
+	.tip_text {
+	}
+}
+// mobile
+@media (max-width: 768px) {
+	.tip {
+		bottom: 1.7rem;
+	}
+	.tip_text {
+	}
+}
