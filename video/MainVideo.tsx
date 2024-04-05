@@ -4,6 +4,7 @@ import React from 'react';
 import ReactPlayer from 'react-player/lazy';
 import styles from './MainVideo.module.scss';
 import dynamic from 'next/dynamic';
+import MuxPlayer from '@mux/mux-player-react';
 export default function MainVideo() {
 	// const ytURL = 'https://www.youtube.com/watch?v=XPm7zy-X_fI';
 	const ytURL = 'https://www.youtube.com/watch?v=qEVUtrk8_B4';
@@ -38,6 +39,14 @@ export default function MainVideo() {
 				<DynamicPlayer controls url={ytURL} />
 			</div>
 			<div className={styles.footer}></div>
+			<MuxPlayer
+				playbackId="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
+				metadata={{
+					video_id: 'video-id-54321',
+					video_title: 'Test video title',
+					viewer_user_id: 'user-id-007',
+				}}
+			/>
 		</div>
 	);
 }

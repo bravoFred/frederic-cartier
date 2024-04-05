@@ -11,6 +11,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mux/mux-player": "^2.4.1",
+    "@mux/mux-player-react": "^2.4.1",
     "@react-three/drei": "^9.99.3",
     "@react-three/fiber": "^8.15.16",
     "@react-three/postprocessing": "^2.15.1",
