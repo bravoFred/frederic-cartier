@@ -20,16 +20,16 @@ export default function MainVideo() {
 			<Header />
 			<p className={styles.title}>Mux</p>
 			<p className={styles.subtitle}>
-				Option A, recommended, seamless, lots of playback controls, fits nicely with your
-				theme.
+				Recommended, seamless, customizable, lots of playback controls, will fit nicely with
+				your theme
 			</p>
 			<DynamicPlayer controls url={muxURL} />
-			<p className={styles.title}>Custom</p>
+			{/* <p className={styles.title}>Custom</p>
 			<p className={styles.subtitle}>
 				Option B, less playback controls. Customizing this is doable but most expensive
 				option
 			</p>
-			<DynamicPlayer controls url={customURL} />
+			<DynamicPlayer controls url={customURL} /> */}
 			<p className={styles.title}>Vimeo</p>
 			<p className={styles.subtitle}>
 				Added this to show Vimeo functionality down the road if desired
