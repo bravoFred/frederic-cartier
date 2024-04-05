@@ -24,13 +24,19 @@ export default function MainVideo() {
 				Recommended, seamless, customizable, lots of playback controls, will fit nicely with
 				your theme
 			</p>
-			<DynamicPlayer controls url={muxURL} />
+			<div className={styles.player_wrapper}>
+				<DynamicPlayer controls url={muxURL} />
+			</div>
 			<p className={styles.title}>Vimeo</p>
 			<p className={styles.subtitle}>For Vimeo functionality down the road if desired</p>
-			<DynamicPlayer controls url={vimeoURL} />
+			<div className={styles.player_wrapper}>
+				<DynamicPlayer controls url={vimeoURL} />
+			</div>
 			<p className={styles.title}>Youtube</p>
 			<p className={styles.subtitle}>For Youtube functionality down the road if desired</p>
-			<DynamicPlayer controls url={ytURL} />
+			<div className={styles.player_wrapper}>
+				<DynamicPlayer controls url={ytURL} />
+			</div>
 			<div className={styles.footer}></div>
 		</div>
 	);
