@@ -5,7 +5,8 @@ import ReactPlayer from 'react-player/lazy';
 import styles from './MainVideo.module.scss';
 import dynamic from 'next/dynamic';
 export default function MainVideo() {
-	const ytURL = 'https://www.youtube.com/watch?v=XPm7zy-X_fI';
+	// const ytURL = 'https://www.youtube.com/watch?v=XPm7zy-X_fI';
+	const ytURL = 'https://www.youtube.com/watch?v=qEVUtrk8_B4';
 	const vimeoURL = 'https://vimeo.com/channels/bestofstaffpicks/915744407';
 	const customURL =
 		'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4';
