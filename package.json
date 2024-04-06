@@ -5,12 +5,14 @@
   "scripts": {
     "convert": "ts-node ./scripts/convert.ts",
     "autoconvert": "ts-node ./scripts/autoconvert.ts",
-    "dev": " concurrently \"next dev\" \"npm run autoconvert\"",
+    "dev": " concurrently \\\"next dev\\\" \\\"npm run autoconvert\\\" & npx next-video sync -w",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@mux/mux-player": "^2.4.1",
+    "@mux/mux-player-react": "^2.4.1",
     "@react-three/drei": "^9.99.3",
     "@react-three/fiber": "^8.15.16",
     "@react-three/postprocessing": "^2.15.1",
@@ -19,6 +21,7 @@
     "leva": "^0.9.35",
     "maath": "^0.10.7",
     "next": "14.1.0",
+    "next-video": "^0.17.2",
     "r3f-perf": "^7.1.2",
     "react": "^18.2.0",
     "react-dom": "^18",
