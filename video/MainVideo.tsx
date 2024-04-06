@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Header from '@/components/Header';
 import React from 'react';
 // import Video from 'next-video';
@@ -24,6 +25,8 @@ export default function MainVideo() {
 	const DynamicMuxPlayer = dynamic(() => import('@mux/mux-player-react'), {
 		loading: () => <p>loading...</p>,
 	});
+	// console.log(MuxPlayer);
+
 	return (
 		<div className={styles.main}>
 			<Header />
@@ -52,6 +55,8 @@ export default function MainVideo() {
 			{/* use playback id not asset id */}
 			<MuxPlayer
 				className={styles.mux_player}
+				// autoPlay
+				// muted
 				// test video
 				// playbackId="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
 				// volta video

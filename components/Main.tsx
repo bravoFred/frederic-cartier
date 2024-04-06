@@ -11,7 +11,7 @@ export default function Main() {
 			<Nav />
 			{/* <Status /> */}
 			{/* <Email /> */}
-			<ComingSoon />
+			{/* <ComingSoon /> */}
 			<Credits />
 		</>
 	);
