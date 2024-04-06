@@ -5,7 +5,7 @@
   "scripts": {
     "convert": "ts-node ./scripts/convert.ts",
     "autoconvert": "ts-node ./scripts/autoconvert.ts",
-    "dev": " concurrently \\\"next dev\\\" \\\"npm run autoconvert\\\" & npx next-video sync -w",
+    "dev": " concurrently \"next dev\" \"npm run autoconvert\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
