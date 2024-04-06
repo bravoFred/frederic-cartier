@@ -21,7 +21,7 @@ export default function MainVideo() {
 			<Header />
 			<p className={styles.title}>Mux</p>
 			<p className={styles.subtitle}>
-				Recommended, seamless, customizable, lots of playback controls, will fit nicely with
+				Recommended, seamless, customizable, lots of playback controls, fits nicely with
 				your theme
 			</p>
 			<div className={styles.player_wrapper}>
