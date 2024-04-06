@@ -10,7 +10,9 @@ export default function Nav() {
 
 	return (
 		<nav className={styles.nav}>
-			<p className={styles.nav_logo}>FREDERIC CARTIER</p>
+			<p className={styles.nav_item}>FILMS</p>
+			<p className={styles.nav_item}>FREDERIC CARTIER</p>
+			<p className={styles.nav_item}>ABOUT</p>
 		</nav>
 	);
 }

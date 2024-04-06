@@ -4,9 +4,6 @@ $speed: 1s;
 		opacity: 0;
 		// transform: scale(0);
 	}
-	66% {
-		opacity: 0;
-	}
 	to {
 		opacity: 1;
 	}
@@ -21,18 +18,14 @@ $speed: 1s;
 	align-items: center;
 	padding: 1rem;
 	z-index: 1000;
-	animation: fadeIn 4s ease-in-out;
+	animation: fadeIn 1s ease-in-out;
 	// border: 1px solid red;
 	width: 100vw;
 	align-items: center;
 	padding: 0;
 	z-index: 9;
-	height: 60px;
-	// pointer-events: none;
-	// cant select text
-	// opacity: 0.75;
+	height: 4rem;
 	user-select: none;
-
 	transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .credit,
@@ -42,10 +35,9 @@ $speed: 1s;
 	flex-direction: row;
 	font-size: 8px;
 	text-align: center;
-	color: #444;
+	color: #fff;
 	margin: 0 0.5rem;
 	font-weight: 300 !important;
-	opacity: 0.75;
 	letter-spacing: 0.75px;
 	text-transform: uppercase;
 	line-height: 1rem;
