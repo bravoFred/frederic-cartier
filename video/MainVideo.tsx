@@ -55,7 +55,8 @@ export default function MainVideo() {
 				// test video
 				// playbackId="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
 				// volta video
-				playbackId="PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ"
+				// playbackId="PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ"
+				playbackId="Mi5p7ncpuEh6BT6epoEd026jOxyOKmebgategcY54nb4"
 				// window video
 				// playbackId="c5GKCMXvMyTwUaTKl6DdsrUMgF28hkYDjn01NOR6Vui00"
 				// metadata={{
@@ -65,7 +66,7 @@ export default function MainVideo() {
 				// }}
 				thumbnailTime={80}
 				//volta thumbnail
-				poster="https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.png?width=1920&height=1080&time=80"
+				poster="https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.png?width=3840&height=1634&time=80"
 				// window thumbnail
 				// poster="https://image.mux.com/c5GKCMXvMyTwUaTKl6DdsrUMgF28hkYDjn01NOR6Vui00/thumbnail.png?width=1280&height=720&time=0"
 				accent-color="#1a1a1a"
