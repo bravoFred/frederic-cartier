@@ -149,16 +149,16 @@ $baseDelay: 2000ms;
 		flex-direction: column;
 		margin-bottom: 0.5rem;
 	}
-	.credit_overlay {
-		background-image: linear-gradient(
-			to right,
-			rgba(0, 0, 0, 1) 5%,
-			rgba(255, 0, 0, 0) 25%,
-			rgba(0, 0, 0, 0) 75%,
+	// .credit_overlay {
+	// 	background-image: linear-gradient(
+	// 		to right,
+	// 		rgba(0, 0, 0, 1) 2%,
+	// 		rgba(255, 0, 0, 0) 25%,
+	// 		rgba(0, 0, 0, 0) 75%,
 
-			rgba(0, 0, 0, 1) 95%
-		);
-	}
+	// 		rgba(0, 0, 0, 1) 98%
+	// 	);
+	// }
 }
 
 @keyframes marquee {

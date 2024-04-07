@@ -25,6 +25,7 @@ body {
 		Helvetica Neue,
 		sans-serif;
 	font-weight: 700;
+	transition: all 0.25s ease-in-out;
 }
 .main {
 	position: fixed;
