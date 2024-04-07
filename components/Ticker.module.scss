@@ -22,7 +22,10 @@ $baseDelay: 2000ms;
 	z-index: 9;
 	height: 4rem;
 	user-select: none;
-	transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: all 0.25s ease-in-out;
+	&:hover {
+		box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.5);
+	}
 }
 .divider {
 	display: flex;

@@ -22,7 +22,10 @@ $speed: 0.25s;
 	// border: 1px solid red;
 	animation: fadeInTop 0.5s ease-in-out;
 
-	transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: all 0.25s ease-in-out;
+	&:hover {
+		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+	}
 }
 
 .nav_item {
