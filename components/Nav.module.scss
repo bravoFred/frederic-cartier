@@ -23,9 +23,6 @@ $speed: 0.25s;
 	animation: fadeInTop 0.5s ease-in-out;
 
 	transition: all 0.25s ease-in-out;
-	&:hover {
-		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
-	}
 }
 
 .nav_item {
@@ -95,6 +92,11 @@ $speed: 0.25s;
 }
 
 @media (min-width: 768px) {
+	.nav {
+		&:hover {
+			box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+		}
+	}
 	.nav_item:nth-child(1) {
 		margin: 0 4rem;
 	}

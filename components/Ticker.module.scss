@@ -23,9 +23,6 @@ $baseDelay: 2000ms;
 	height: 4rem;
 	user-select: none;
 	transition: all 0.25s ease-in-out;
-	&:hover {
-		box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.5);
-	}
 }
 .divider {
 	display: flex;
@@ -127,7 +124,13 @@ $baseDelay: 2000ms;
 		margin-bottom: 0.5rem;
 	}
 }
-
+@media (min-width: 768px) {
+	.credits {
+		&:hover {
+			box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.5);
+		}
+	}
+}
 @keyframes marquee {
 	0% {
 		opacity: 0;
