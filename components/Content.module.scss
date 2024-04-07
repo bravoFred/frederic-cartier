@@ -1,8 +1,12 @@
+@import '@/styles/Main.module.scss';
 .content {
 	width: 100vw;
 	height: calc(100vh - 8rem);
 	top: 4rem;
 	position: absolute;
+}
+.content * {
+	animation: fadeIn 0.5s ease-in-out;
 }
 .content_hero {
 	width: 100%;
