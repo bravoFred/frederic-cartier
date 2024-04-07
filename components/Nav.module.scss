@@ -5,9 +5,10 @@ $speed: 0.25s;
 	-webkit-tap-highlight-color: transparent;
 	user-select: none;
 	color: #fff;
+	transition: all 0.25s ease-in-out;
 }
 .nav {
-	position: fixed;
+	// position: fixed;
 	// top: 0;
 	display: flex;
 	width: 100%;
@@ -21,14 +22,12 @@ $speed: 0.25s;
 	// transition: all 1s ease-in-out;
 	// border: 1px solid red;
 	// animation: fadeInTop 1s ease-in-out;
-
-	transition: all 0.25s ease-in-out;
 }
 
 .nav_item {
 	// position: absolute;
 	// top: 50%;
-	transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
+	// transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
 	font-size: 1.25rem;
 	// font-weight: 100;
 	cursor: pointer;
@@ -64,7 +63,7 @@ $speed: 0.25s;
 .nav_item_text_fadeOutLeft,
 .nav_item_text_fadeInRight,
 .nav_item_text_fadeOutRight {
-	transition: all $speed ease-in-out;
+	// transition: all $speed ease-in-out;
 	cursor: pointer;
 	height: 100%;
 	display: flex;

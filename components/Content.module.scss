@@ -1,12 +1,16 @@
 @import '@/styles/Main.module.scss';
 .content {
 	width: 100vw;
+	// transition: all 0.25s ease-in-out;
 	height: calc(100vh - 8rem);
-	top: 4rem;
-	position: absolute;
+	// height: 100vh;
+	// top: 4rem;
+	// position: absolute;
+	// z-index: 2;
 }
 .content * {
 	animation: fadeIn 1s ease-in-out;
+	// filter: blur(2rem);
 }
 .content_hero {
 	width: 100%;

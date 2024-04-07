@@ -6,6 +6,7 @@ export default function Credits() {
 	const designer = `Frederic Cartier`;
 	const currentYear = new Date().getFullYear();
 	const regular = `${designer} ${currentYear}. All rights reserved. DESIGN`;
+	const { films, about } = useContext(InputContextProvider);
 
 	const developer = `Thomas Matlock`;
 	const dev = `development ${developer}`;
@@ -50,13 +51,19 @@ export default function Credits() {
 		);
 	};
 	return (
-		<div className={styles.credits}>
+		<div
+			className={styles.credits}
+			style={{
+				// transform: films || about ? 'translateY(100%)' : 'translateY(0%)',
+				filter: about || films ? 'blur(1rem)' : 'none',
+			}}
+		>
 			<Child />
 			{/* <Child /> */}
 			{/* <Child /> */}
 			{/* <Child /> */}
 			{/* <Child /> */}
-			<div className={styles.credit_overlay}></div>
+			<div className={styles.credit_overlay} />
 		</div>
 	);
 }
