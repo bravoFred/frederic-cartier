@@ -1,0 +1,18 @@
+.films,
+.films_hidden {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	// border: 1px solid red;
+	padding: 2rem;
+	margin: 2rem;
+	position: absolute;
+}
+.films_hidden * {
+	transition: all 0.25s ease-in-out;
+	opacity: 0;
+	pointer-events: none;
+}

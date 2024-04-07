@@ -4,6 +4,7 @@ import Credits from './Ticker';
 import Content from './Content';
 import Modal from './Modal';
 import About from './About';
+import Films from './Films';
 export default function Main() {
 	return (
 		<>
@@ -11,6 +12,7 @@ export default function Main() {
 			<Content />
 			<Modal>
 				<About />
+				<Films />
 			</Modal>
 			<Credits />
 		</>
