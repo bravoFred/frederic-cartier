@@ -23,7 +23,7 @@ export default function Nav() {
 				FREDERIC CARTIER
 			</p>
 			<p className={styles.nav_item} onClick={gotoAboutMe}>
-				{aboutMe ? 'CLOSE' : 'ABOUT ME'}
+				{aboutMe ? 'CLOSE' : 'ABOUT'}
 			</p>
 		</nav>
 	);
