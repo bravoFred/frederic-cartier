@@ -1,5 +1,7 @@
 @import '@/styles/Main.module.scss';
 .content {
+	position: fixed;
+	top: 4rem;
 	width: 100%;
 	height: calc(100% - 8rem);
 }
