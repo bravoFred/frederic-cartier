@@ -71,7 +71,8 @@ export default function MainVideo() {
 				// }}
 				thumbnailTime={80}
 				//volta thumbnail
-				poster="https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.png?width=3840&height=1634&time=80"
+				// poster="https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.png?width=3840&height=1634&time=80"
+				poster="https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.webp?width=3840&height=1634&time=80"
 				// window thumbnail
 				// poster="https://image.mux.com/c5GKCMXvMyTwUaTKl6DdsrUMgF28hkYDjn01NOR6Vui00/thumbnail.png?width=1280&height=720&time=0"
 				accent-color="#1a1a1a"
