@@ -16,6 +16,33 @@ $speed: 1s;
 		opacity: 1;
 	}
 }
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeInTop {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	to {
+		opacity: 1;
+	}
+}
 .nav * {
 	-webkit-tap-highlight-color: transparent;
 	user-select: none;
@@ -55,6 +82,27 @@ $speed: 1s;
 	// padding: 1rem;
 	// left: 0;
 	font-size: 1rem;
+	// width: 10rem;
+	white-space: nowrap;
+	// flex: 1;
+	// animation: fadeInLeft 1s ease-in-out;
+}
+.nav_item:first-of-type {
+	animation: fadeInLeft 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.nav_item:nth-child(2) {
+	animation: fadeInTop 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 10rem;
+}
+.nav_item:last-of-type {
+	animation: fadeInRight 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.nav_item_fadeOutLeft {
+	animation: moveUp 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 @media (min-width: 768px) {
 	.nav_item:nth-child(1) {
