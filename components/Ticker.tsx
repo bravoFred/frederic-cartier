@@ -1,7 +1,7 @@
 import styles from './Ticker.module.scss';
 import Link from 'next/link';
 import InputContextProvider from '@/store/inputContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 export default function Credits() {
 	const designer = `Frederic Cartier`;
 	const currentYear = new Date().getFullYear();
@@ -10,8 +10,8 @@ export default function Credits() {
 	const developer = `Thomas Matlock`;
 	const dev = `development ${developer}`;
 	const divider = '|';
-	return (
-		<div className={styles.credits}>
+	const Child = () => {
+		return (
 			<div className={styles.credit}>
 				<p className={styles.divider}>{divider}</p>
 				<p className={styles.credit_text}>{regular}</p>
@@ -24,7 +24,38 @@ export default function Credits() {
 				>
 					{dev}
 				</Link>
+				<p className={styles.divider}>{divider}</p>
+				<p className={styles.credit_text}>{regular}</p>
+				<p className={styles.credit_text_bold}>{designer}</p>
+				<Link
+					href="https://www.thomasmatlock.com"
+					target="_blank"
+					className={styles.credit_text}
+					style={{ cursor: 'pointer' }}
+				>
+					{dev}
+				</Link>
+				<p className={styles.divider}>{divider}</p>
+				<p className={styles.credit_text}>{regular}</p>
+				<p className={styles.credit_text_bold}>{designer}</p>
+				<Link
+					href="https://www.thomasmatlock.com"
+					target="_blank"
+					className={styles.credit_text}
+					style={{ cursor: 'pointer' }}
+				>
+					{dev}
+				</Link>
 			</div>
+		);
+	};
+	return (
+		<div className={styles.credits}>
+			<Child />
+			{/* <Child /> */}
+			{/* <Child /> */}
+			{/* <Child /> */}
+			{/* <Child /> */}
 			<div className={styles.credit_overlay}></div>
 		</div>
 	);

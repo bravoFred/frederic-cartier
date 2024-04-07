@@ -1,6 +1,8 @@
 $speed: 1s;
-$marqueeSpeed: 30s;
-$width: 550px;
+$multiplier: 1;
+$marqueeSpeed: $multiplier * 10s;
+$width: 535px;
+$baseDelay: 2000ms;
 
 @keyframes fadeIn {
 	from {
@@ -14,13 +16,12 @@ $width: 550px;
 .credits {
 	position: fixed;
 	bottom: 0;
-	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	padding: 1rem;
-	z-index: 1000;
+	z-index: 10;
 	animation: fadeIn 1s ease-in-out;
 	// border: 1px solid red;
 	width: 100%;
@@ -55,24 +56,40 @@ $width: 550px;
 	margin: 0;
 	padding: 0;
 	// width: 50%;
-	min-width: $width;
-	max-width: $width;
+	// min-width: $width;
+	// max-width: $width;
+	width: auto;
 	// height: 100%;
 	// width: 100%;
 	// flex: 1;
+	opacity: 1;
+	// animation: marquee $marqueeSpeed linear infinite;
+	white-space: nowrap;
 }
 .credit:nth-of-type(1) {
-	left: 0%;
-	animation: marquee $marqueeSpeed linear infinite;
+	left: 0;
+	// opacity: 0;
+
+	// animation: marquee $marqueeSpeed linear infinite;
 }
 .credit:nth-of-type(2) {
-	left: 546px;
+	// left: $width;
+	// right: 0;
+	// left: 0;
+	// animation: marquee $marqueeSpeed linear infinite;
+	animation-delay: $baseDelay * $multiplier;
+	// left: 546px;
 	// animation: marquee2 $marquee linear infinite;
 	// margin-left: -4rem;
 }
 .credit:nth-of-type(3) {
-	left: calc(2 * #{$width});
-	// margin-right: -4rem;
+	animation-delay: $baseDelay * 2 * $multiplier;
+}
+.credit:nth-of-type(4) {
+	animation-delay: $baseDelay * 3 * $multiplier;
+}
+.credit:nth-of-type(5) {
+	animation-delay: $baseDelay * 4 * $multiplier;
 }
 .credit_text,
 .credit_text_bold {
@@ -92,17 +109,19 @@ $width: 550px;
 }
 .credit_overlay {
 	position: absolute;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	z-index: 2;
 	transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
 	user-select: none;
 	pointer-events: none;
+	// border: 1px solid red;
+
 	background-image: linear-gradient(
 		to right,
 		rgba(0, 0, 0, 1) 0%,
-		rgba(255, 0, 0, 0) 25%,
-		rgba(0, 0, 0, 0) 75%,
+		rgba(0, 0, 0, 0) 25%,
+		rgba(255, 0, 0, 0) 75%,
 
 		rgba(0, 0, 0, 1) 100%
 	);
@@ -141,44 +160,27 @@ $width: 550px;
 		);
 	}
 }
-#maindiv {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	border: 1px solid red;
-	z-index: 10;
-	overflow: hidden;
-	white-space: nowrap;
-	color: white;
-	height: 4rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-
-#div1 {
-	display: inline-block;
-	color: white;
-	animation: marquee 10s linear infinite;
-	font-weight: 300 !important;
-}
-
-#div2 {
-	display: inline-block;
-	color: white;
-	animation: marquee2 10s linear infinite;
-	animation-delay: 5s;
-	font-weight: 300 !important;
-}
 
 @keyframes marquee {
-	from {
+	0% {
+		// right: calc(100%);
+		opacity: 0;
 		transform: translateX(100vw);
-	}
-	to {
-		left: calc(-540px);
 		// transform: translateX(-100%);
+	}
+	1% {
+		opacity: 1;
+	}
+	50% {
+		// right: calc(0%);
+		transform: translateX(0);
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-100vw);
 	}
 }
 
