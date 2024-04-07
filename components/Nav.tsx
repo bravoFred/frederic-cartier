@@ -7,7 +7,7 @@ import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
 	const { about, films, goToHome, goToFilms, goToAbout } = useContext(InputContextProvider);
-	console.log(`films: ${films}, about: ${about}`);
+	// console.log(`films: ${films}, about: ${about}`);
 
 	return (
 		<nav className={styles.nav}>
