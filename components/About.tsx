@@ -4,8 +4,8 @@ import InputContextProvider from '@/store/inputContext';
 import Link from 'next/link';
 import { useContext } from 'react';
 export default function About() {
-	const { aboutMeData } = useContext(DataContext);
-	const { contact } = aboutMeData;
+	const { aboutData } = useContext(DataContext);
+	const { contact } = aboutData;
 	const { about } = useContext(InputContextProvider);
 
 	const ContactLinks = () => {
@@ -37,8 +37,8 @@ export default function About() {
 		<div className={about ? styles.about : styles.about_hidden}>
 			<div className={styles.about_panel}>
 				<div className={styles.about_panel_content}>
-					<h2>{aboutMeData.about.title}</h2>
-					<p>{aboutMeData.about.description}</p>
+					<h2>{aboutData.about.title}</h2>
+					<p>{aboutData.about.description}</p>
 				</div>
 			</div>
 			<div className={styles.about_panel}>

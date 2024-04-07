@@ -1,17 +1,17 @@
 import { createContext, useState, useEffect, useRef, useContext } from 'react';
 import filmsData from './filmsData';
-import aboutMeData from './aboutMeData';
+import aboutData from './aboutData';
 
 const DataContext = createContext({
 	filmsData: filmsData,
-	aboutMeData: aboutMeData,
+	aboutData: aboutData,
 });
 export function DataContextProvider(props) {
 	return (
 		<DataContext.Provider
 			value={{
 				filmsData,
-				aboutMeData,
+				aboutData,
 			}}
 		>
 			{props.children}
