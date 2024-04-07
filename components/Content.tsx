@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import HeroImg from '@/public/hero.webp';
+// import HeroImg from '@/public/hero.webp';
+import HeroImg from '@/public/hero2.webp';
 import styles from './Content.module.scss';
 import InputContextProvider from '@/store/inputContext';
 import { useContext } from 'react';

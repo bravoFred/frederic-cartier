@@ -12,8 +12,12 @@ const InputContext = createContext({
 });
 export function InputContextProvider(props) {
 	const router = useRouter();
-	const [about, setAbout] = useState(false);
-	const [films, setFilms] = useState(false);
+	const [dev, setDev] = useState(process.env.NODE_ENV === 'development');
+
+	const [testFilms, setTestFilms] = useState(dev ? true : false);
+	const [testAbout, setTestAbout] = useState(false);
+	const [films, setFilms] = useState(testFilms);
+	const [about, setAbout] = useState(testAbout);
 
 	function goToFilms() {
 		// router.push('/');
@@ -36,8 +40,27 @@ export function InputContextProvider(props) {
 				goToHome();
 			}
 		}
+		function handleKey1(event) {
+			if (event.key === '1') {
+				console.log('1');
+				goToFilms();
+			}
+		}
+		function handleKey2(event) {
+			if (event.key === '2') {
+				console.log('2');
+
+				goToAbout();
+			}
+		}
 		document.addEventListener('keydown', handleEscape);
-		return () => document.removeEventListener('keydown', handleEscape);
+		document.addEventListener('keydown', handleKey1);
+		document.addEventListener('keydown', handleKey2);
+		return () => {
+			document.removeEventListener('keydown', handleEscape);
+			document.removeEventListener('keydown', handleKey1);
+			document.removeEventListener('keydown', handleKey2);
+		};
 	}, []);
 	return (
 		<InputContext.Provider

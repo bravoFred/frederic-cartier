@@ -12,7 +12,7 @@ export default function Main() {
 			<Content />
 			<Modal>
 				<About />
-				<Films />
+				{/* <Films /> */}
 			</Modal>
 			<Credits />
 		</>
