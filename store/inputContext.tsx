@@ -17,6 +17,8 @@ export function InputContextProvider(props) {
 
 	function goToFilms() {
 		// router.push('/');
+		if (films || about) return;
+		// if (films) return;
 		setAbout(false);
 		setFilms(!films);
 	}
@@ -26,13 +28,10 @@ export function InputContextProvider(props) {
 		setFilms(false);
 	}
 	function goToAbout() {
-		// router.push('/');
-		if (films) {
-			goToHome();
-		} else {
-			setAbout(!about);
-			setFilms(false);
-		}
+		if (films) goToHome();
+		if (!films) setAbout(!about);
+		// setFilms(false);
+		// setAbout(!about);
 	}
 
 	return (
