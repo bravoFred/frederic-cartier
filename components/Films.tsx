@@ -2,37 +2,58 @@ import styles from './Films.module.scss';
 import InputContextProvider from '@/store/inputContext';
 import DataContextProvider from '@/store/dataContext';
 import Image from 'next/image';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { useState, useRef } from 'react';
 export default function Films() {
 	const { films } = useContext(InputContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
-	// list of films as cards
+	const [selectedFilmID, setSelectedFilmID] = useState(filmsData[0].id ? filmsData[0].id : 0);
+	const [sortedFilms, setSortedFilms] = useState(filmsData);
+
+	function sortFilmsSelectedInMiddle(id) {
+		const sortedFilms = filmsData.filter((film) => film.id !== id);
+		const selectedFilm = filmsData.filter((film) => film.id === id);
+		const sortedFilmsMiddle = [];
+		const middle = Math.floor(sortedFilms.length / 2);
+		sortedFilms.forEach((film, index) => {
+			if (index === middle) {
+				sortedFilmsMiddle.push(selectedFilm[0]);
+			}
+			sortedFilmsMiddle.push(film);
+		});
+		setSortedFilms(sortedFilmsMiddle);
+	}
 	const clickHandler = (id) => {
-		console.log('clicked', id);
+		setSelectedFilmID(id);
+		// setSortedFilms(sortedFilms);
+		sortFilmsSelectedInMiddle(id);
+		// sortedFilms.forEach((film) => {
+		// 	console.log(film.id);
+		// });
+		// move selected film to middle
 	};
-	const poster =
-		'https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.webp?width=3840&height=1634&time=80';
 
 	const FilmsCards = () => {
 		return (
 			<ul className={styles.films_list}>
-				{filmsData.map((film) => (
-					<li
-						key={film.id}
-						className={styles.films_list_item}
-						onClick={() => clickHandler(film.id)}
-					>
-						{/* <Image
-							src={film.poster}
-							alt={film.title}
-							width={200}
-							height={300}
-							layout="responsive"
-							objectFit="cover"
-						/> */}
-						<h3>{film.title}</h3>
-					</li>
-				))}
+				{sortedFilms.map((film) => {
+					return (
+						<li
+							key={film.id}
+							className={
+								selectedFilmID === film.id
+									? styles.films_list_item_selected
+									: styles.films_list_item
+							}
+							onClick={() => clickHandler(film.id)}
+						>
+							<div className={styles.film_card_image}>
+								{/* <Image src={film.image} alt={film.title} width={200} height={300} /> */}
+							</div>
+							<div className={styles.film_card_title}>{film.title}</div>
+						</li>
+					);
+				})}
 			</ul>
 		);
 	};

@@ -7,6 +7,7 @@
 	align-items: center;
 	flex-direction: row;
 	// border: 1px solid red;
+	position: fixed;
 	// padding: 2rem;
 	// margin: 2rem;
 	position: absolute;
@@ -17,6 +18,7 @@
 	pointer-events: none;
 }
 .films_list {
+	// border: 1px solid red;
 	display: flex;
 	// flex-wrap: wrap;
 	justify-content: center;
@@ -24,11 +26,16 @@
 	// border: 1px solid #000;
 	height: 66%;
 	width: 100%;
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
+	scroll-snap-align: start;
+	// overflow-x: scroll;
+	// overflow-y: hidden;
 }
 .films_list_item,
 .films_list_item_selected,
 .films_list_item_active {
+	user-select: none;
+	z-index: 10;
 	display: flex;
 	cursor: pointer;
 	flex-direction: column;
@@ -40,8 +47,18 @@
 	width: 25vw;
 	border-radius: 0.5rem;
 	height: 100%;
+	transition: all 0.25s ease-in-out;
+	background-color: transparent;
+	max-width: 300px;
 	&:hover {
 		// background-color: #f0f0f0;
-		box-shadow: 0 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+		box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 	}
+}
+.films_list_item_selected {
+	z-index: 20;
+	box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+	// filter: invert(1);
+	color: black;
+	background-color: #000;
 }
