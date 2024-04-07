@@ -7,32 +7,32 @@ const InputContext = createContext({
 	setAbout: (value: boolean) => {},
 	setFilms: (value: boolean) => {},
 	goToHome: () => {},
-	gotoFilms: () => {},
-	gotoAboutMe: () => {},
+	goToFilms: () => {},
+	goToAbout: () => {},
 });
 export function InputContextProvider(props) {
 	const router = useRouter();
 	const [about, setAbout] = useState(false);
 	const [films, setFilms] = useState(false);
 
+	function goToFilms() {
+		// router.push('/');
+		setAbout(false);
+		setFilms(!films);
+	}
 	function goToHome() {
 		// router.push('/');
 		setAbout(false);
 		setFilms(false);
-		console.log('goToHome');
 	}
-	function gotoFilms() {
+	function goToAbout() {
 		// router.push('/');
-		setAbout(false);
-		setFilms(!films);
-		console.log('gotoFilms');
-	}
-	function gotoAboutMe() {
-		// router.push('/');
-		console.log('gotoAboutMe');
-
-		setAbout(!about);
-		setFilms(false);
+		if (films) {
+			goToHome();
+		} else {
+			setAbout(!about);
+			setFilms(false);
+		}
 	}
 
 	return (
@@ -43,8 +43,8 @@ export function InputContextProvider(props) {
 				setAbout,
 				setFilms,
 				goToHome,
-				gotoFilms,
-				gotoAboutMe,
+				goToFilms,
+				goToAbout,
 			}}
 		>
 			{props.children}

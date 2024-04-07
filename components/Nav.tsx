@@ -6,25 +6,21 @@ import InputContextProvider from '../store/inputContext';
 import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
-	const { theme, setTheme } = useContext(UserContextProvider);
-	const { about, setAbout, films, setFilms, goToHome, gotoFilms, gotoAboutMe } =
-		useContext(InputContextProvider);
-	const clickHandler = (e) => {
-		console.log(e.target.innerText);
-
-		console.log('clicked');
-	};
+	const { about, films, goToHome, goToFilms, goToAbout } = useContext(InputContextProvider);
 	return (
 		<nav className={styles.nav}>
-			<p className={styles.nav_item} onClick={gotoFilms}>
-				{films ? 'BACK' : 'FILMS'}
-			</p>
-			<p className={styles.nav_item} onClick={goToHome}>
-				FREDERIC CARTIER
-			</p>
-			<p className={styles.nav_item} onClick={gotoAboutMe}>
-				{about ? 'CLOSE' : 'ABOUT'}
-			</p>
+			<div className={styles.nav_item} onClick={goToFilms}>
+				{/* <p className={styles.nav_item_text}>{films ? 'BACK' : 'FILMS'}</p> */}
+				{!about && <p className={styles.nav_item_text}>FILMS</p>}
+				{/* {films && <p className={styles.nav_item_text}>FILMS</p>} */}
+				{about && <p className={styles.nav_item_text}>ABOUT</p>}
+			</div>
+			<div className={styles.nav_item} onClick={goToHome}>
+				<p className={styles.nav_item_text}>FREDERIC CARTIER</p>
+			</div>
+			<div className={styles.nav_item} onClick={goToAbout}>
+				<p className={styles.nav_item_text}>{about || films ? 'CLOSE' : 'ABOUT'}</p>
+			</div>
 		</nav>
 	);
 }
