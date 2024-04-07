@@ -54,7 +54,6 @@ export default function Credits() {
 		<div
 			className={styles.credits}
 			style={{
-				// transform: films || about ? 'translateY(100%)' : 'translateY(0%)',
 				filter: about || films ? 'blur(1rem)' : 'none',
 			}}
 		>
