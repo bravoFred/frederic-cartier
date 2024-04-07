@@ -15,8 +15,6 @@ body {
 	overscroll-behavior: contain;
 	overscroll-behavior: none;
 	background-color: black;
-
-	/* border: 1px solid blue; */
 }
 .app * {
 	-webkit-tap-highlight-color: transparent;
