@@ -5,10 +5,10 @@ import { useContext } from 'react';
 export default function Credits() {
 	const designer = ` Frederic Cartier`;
 	const developer = `Thomas Matlock`;
-	const { aboutMeActive } = useContext(InputContextProvider);
+	const { about } = useContext(InputContextProvider);
 	const currentYear = new Date().getFullYear();
 	return (
-		<div className={styles.credits} style={aboutMeActive ? { opacity: '1' } : { opacity: '0' }}>
+		<div className={styles.credits} style={about ? { opacity: '1' } : { opacity: '0' }}>
 			<div className={styles.credit}>
 				<p className={styles.credit_text}>
 					&copy; {designer} {currentYear}. All rights reserved.
