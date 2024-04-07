@@ -1,7 +1,7 @@
 @import '@/styles/Main.module.scss';
 .content {
-	width: 100vw;
-	height: calc(100vh - 8rem);
+	width: 100%;
+	height: calc(100% - 8rem);
 }
 
 .content * {
@@ -21,7 +21,5 @@
 		width: 200%;
 		height: 100%;
 		transform: translateX(-25%);
-		// background-size: 200%;
-		// background-position: center;
 	}
 }
