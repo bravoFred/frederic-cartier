@@ -7,7 +7,11 @@ import { useState, useRef } from 'react';
 export default function Films() {
 	const { films } = useContext(InputContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
-	const [selectedFilmID, setSelectedFilmID] = useState(filmsData[0].id ? filmsData[0].id : 0);
+	function getMiddleFilm() {
+		const middle = Math.floor(filmsData.length / 2);
+		return filmsData[middle].id;
+	}
+	const [selectedFilmID, setSelectedFilmID] = useState(getMiddleFilm());
 	const [sortedFilms, setSortedFilms] = useState(filmsData);
 
 	function sortFilmsSelectedInMiddle(id) {
@@ -25,12 +29,7 @@ export default function Films() {
 	}
 	const clickHandler = (id) => {
 		setSelectedFilmID(id);
-		// setSortedFilms(sortedFilms);
 		sortFilmsSelectedInMiddle(id);
-		// sortedFilms.forEach((film) => {
-		// 	console.log(film.id);
-		// });
-		// move selected film to middle
 	};
 
 	const FilmsCards = () => {
@@ -47,9 +46,13 @@ export default function Films() {
 							}
 							onClick={() => clickHandler(film.id)}
 						>
-							<div className={styles.film_card_image}>
-								{/* <Image src={film.image} alt={film.title} width={200} height={300} /> */}
-							</div>
+							<Image
+								className={styles.films_list_item_poster}
+								src={film.poster}
+								alt={film.title}
+								// width={200}
+								// height={300}
+							/>
 							<div className={styles.film_card_title}>{film.title}</div>
 						</li>
 					);
