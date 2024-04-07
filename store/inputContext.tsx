@@ -2,9 +2,9 @@ import { createContext, useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 
 const InputContext = createContext({
-	aboutMe: true as any,
+	about: true as any,
 	films: true as any,
-	setAboutMe: (value: boolean) => {},
+	setAbout: (value: boolean) => {},
 	setFilms: (value: boolean) => {},
 	goToHome: () => {},
 	gotoFilms: () => {},
@@ -12,18 +12,18 @@ const InputContext = createContext({
 });
 export function InputContextProvider(props) {
 	const router = useRouter();
-	const [aboutMe, setAboutMe] = useState(false);
+	const [about, setAbout] = useState(false);
 	const [films, setFilms] = useState(false);
 
 	function goToHome() {
 		// router.push('/');
-		setAboutMe(false);
+		setAbout(false);
 		setFilms(false);
 		console.log('goToHome');
 	}
 	function gotoFilms() {
 		// router.push('/');
-		setAboutMe(false);
+		setAbout(false);
 		setFilms(!films);
 		console.log('gotoFilms');
 	}
@@ -31,16 +31,16 @@ export function InputContextProvider(props) {
 		// router.push('/');
 		console.log('gotoAboutMe');
 
-		setAboutMe(!aboutMe);
+		setAbout(!about);
 		setFilms(false);
 	}
 
 	return (
 		<InputContext.Provider
 			value={{
-				aboutMe,
+				about,
 				films,
-				setAboutMe,
+				setAbout,
 				setFilms,
 				goToHome,
 				gotoFilms,

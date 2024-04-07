@@ -7,7 +7,7 @@ import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
 	const { theme, setTheme } = useContext(UserContextProvider);
-	const { aboutMe, setAboutMe, films, setFilms, goToHome, gotoFilms, gotoAboutMe } =
+	const { about, setAbout, films, setFilms, goToHome, gotoFilms, gotoAboutMe } =
 		useContext(InputContextProvider);
 	const clickHandler = (e) => {
 		console.log(e.target.innerText);
@@ -23,7 +23,7 @@ export default function Nav() {
 				FREDERIC CARTIER
 			</p>
 			<p className={styles.nav_item} onClick={gotoAboutMe}>
-				{aboutMe ? 'CLOSE' : 'ABOUT'}
+				{about ? 'CLOSE' : 'ABOUT'}
 			</p>
 		</nav>
 	);
