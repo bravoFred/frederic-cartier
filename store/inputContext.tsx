@@ -33,7 +33,16 @@ export function InputContextProvider(props) {
 		// setFilms(false);
 		// setAbout(!about);
 	}
-
+	useEffect(() => {
+		// listen for escape key
+		function handleEscape(event) {
+			if (event.key === 'Escape') {
+				goToHome();
+			}
+		}
+		document.addEventListener('keydown', handleEscape);
+		return () => document.removeEventListener('keydown', handleEscape);
+	}, []);
 	return (
 		<InputContext.Provider
 			value={{
