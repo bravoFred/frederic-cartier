@@ -1,5 +1,5 @@
 $speed: 1s;
-$multiplier: 1;
+$multiplier: 12;
 $marqueeSpeed: $multiplier * 10s;
 $width: 535px;
 $baseDelay: 2000ms;
@@ -119,11 +119,11 @@ $baseDelay: 2000ms;
 
 	background-image: linear-gradient(
 		to right,
-		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 1) 2%,
 		rgba(0, 0, 0, 0) 25%,
 		rgba(255, 0, 0, 0) 75%,
 
-		rgba(0, 0, 0, 1) 100%
+		rgba(0, 0, 0, 1) 98%
 	);
 }
 .credit_text {
@@ -152,11 +152,11 @@ $baseDelay: 2000ms;
 	.credit_overlay {
 		background-image: linear-gradient(
 			to right,
-			rgba(0, 0, 0, 1) 0%,
-			rgba(255, 0, 0, 0) 10%,
-			rgba(0, 0, 0, 0) 90%,
+			rgba(0, 0, 0, 1) 5%,
+			rgba(255, 0, 0, 0) 25%,
+			rgba(0, 0, 0, 0) 75%,
 
-			rgba(0, 0, 0, 1) 100%
+			rgba(0, 0, 0, 1) 95%
 		);
 	}
 }
