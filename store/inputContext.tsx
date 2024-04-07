@@ -18,7 +18,6 @@ export function InputContextProvider(props) {
 	function goToFilms() {
 		// router.push('/');
 		if (films || about) return;
-		// if (films) return;
 		setAbout(false);
 		setFilms(!films);
 	}
@@ -30,11 +29,8 @@ export function InputContextProvider(props) {
 	function goToAbout() {
 		if (films) goToHome();
 		if (!films) setAbout(!about);
-		// setFilms(false);
-		// setAbout(!about);
 	}
 	useEffect(() => {
-		// listen for escape key
 		function handleEscape(event) {
 			if (event.key === 'Escape') {
 				goToHome();
