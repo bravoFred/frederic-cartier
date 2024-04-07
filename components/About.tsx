@@ -1,10 +1,12 @@
 import styles from './About.module.scss';
 import DataContext from '@/store/dataContext';
+import InputContextProvider from '@/store/inputContext';
 import Link from 'next/link';
 import { useContext } from 'react';
 export default function About() {
 	const { aboutMeData } = useContext(DataContext);
-	const { about, contact } = aboutMeData;
+	const { contact } = aboutMeData;
+	const { about } = useContext(InputContextProvider);
 
 	const ContactLinks = () => {
 		return (
@@ -32,11 +34,11 @@ export default function About() {
 		);
 	};
 	return (
-		<div className={styles.about}>
+		<div className={about ? styles.about : styles.about_hidden}>
 			<div className={styles.about_panel}>
 				<div className={styles.about_panel_content}>
-					<h2>{about.title}</h2>
-					<p>{about.description}</p>
+					<h2>{aboutMeData.about.title}</h2>
+					<p>{aboutMeData.about.description}</p>
 				</div>
 			</div>
 			<div className={styles.about_panel}>

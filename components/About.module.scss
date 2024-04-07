@@ -1,5 +1,6 @@
-.about {
-	height: 100% !important;
+.about,
+.about_hidden {
+	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -8,6 +9,11 @@
 	// border: 1px solid red;
 	padding: 2rem;
 	margin: 2rem;
+}
+.about_hidden * {
+	opacity: 0;
+	transform: scale(0);
+	pointer-events: none;
 }
 .about_panel {
 	display: flex;
