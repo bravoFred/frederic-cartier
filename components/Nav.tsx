@@ -7,12 +7,24 @@ import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
 	const { theme, setTheme } = useContext(UserContextProvider);
+	const { aboutMe, setAboutMe, films, setFilms, goToHome, gotoFilms, gotoAboutMe } =
+		useContext(InputContextProvider);
+	const clickHandler = (e) => {
+		console.log(e.target.innerText);
 
+		console.log('clicked');
+	};
 	return (
 		<nav className={styles.nav}>
-			<p className={styles.nav_item}>FILMS</p>
-			<p className={styles.nav_item}>FREDERIC CARTIER</p>
-			<p className={styles.nav_item}>ABOUT</p>
+			<p className={styles.nav_item} onClick={gotoFilms}>
+				{films ? 'BACK' : 'FILMS'}
+			</p>
+			<p className={styles.nav_item} onClick={goToHome}>
+				FREDERIC CARTIER
+			</p>
+			<p className={styles.nav_item} onClick={gotoAboutMe}>
+				{aboutMe ? 'CLOSE' : 'ABOUT ME'}
+			</p>
 		</nav>
 	);
 }
