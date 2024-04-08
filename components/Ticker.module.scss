@@ -125,19 +125,8 @@ $baseDelay: 2000ms;
 	.credit_text_bold {
 		font-size: 6px;
 	}
+}
 
-	.credit:nth-child(2) {
-		flex-direction: column;
-		margin-bottom: 0.5rem;
-	}
-}
-@media (min-width: 768px) {
-	.credits {
-		// &:hover {
-		// 	box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.5);
-		// }
-	}
-}
 @keyframes marquee {
 	0% {
 		opacity: 0;
