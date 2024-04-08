@@ -30,9 +30,9 @@ export default function App() {
 	};
 	return (
 		<Swiper
-			slidesPerView={mobile ? 3 : 4}
+			slidesPerView={mobile ? 2 : 4}
 			mousewheel={true}
-			spaceBetween={32}
+			spaceBetween={mobile ? 16 : 32}
 			grabCursor={true}
 			centeredSlides={true}
 			direction={mobile ? 'vertical' : 'horizontal'}
@@ -52,7 +52,7 @@ export default function App() {
 				stretch: 0,
 				depth: 100,
 				modifier: 1,
-				slideShadows: true,
+				slideShadows: mobile ? false : true,
 			}}
 		>
 			<SwiperSlide
