@@ -30,7 +30,7 @@ export default function App() {
 	};
 	return (
 		<Swiper
-			slidesPerView={mobile ? 2 : 4}
+			slidesPerView={mobile ? 1.25 : 3.5}
 			mousewheel={true}
 			spaceBetween={mobile ? 16 : 32}
 			grabCursor={true}
