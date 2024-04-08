@@ -173,7 +173,7 @@ export default function App() {
 				}}
 				autoplay={{
 					delay: 2500,
-					disableOnInteraction: false,
+					disableOnInteraction: true,
 				}}
 				// modules={[Mousewheel, Autoplay, EffectCoverflow]}
 				modules={[Mousewheel, Autoplay]}
