@@ -25,7 +25,7 @@ export default function App() {
 	const [selectedFilm, setSelectedFilm] = useState(null);
 	const clickHandler = (id) => {
 		console.log('clicked', id);
-		setSelectedFilm(id);
+		// setSelectedFilm(id);
 		// go to selected film page
 	};
 	// console.log(mobile);
@@ -35,27 +35,24 @@ export default function App() {
 				slidesPerView={3}
 				mousewheel={true}
 				spaceBetween={32}
-				grabCursor={true}
-				centeredSlides={true}
-				// direction={mobile ? 'vertical' : 'horizontal'}
 				loop={true}
-				pagination={{
-					clickable: false,
-				}}
 				autoplay={{
 					delay: 2500,
 					disableOnInteraction: true,
 				}}
-				modules={[Mousewheel, Autoplay, EffectCoverflow]}
+				modules={[Mousewheel, Autoplay, EffectCoverflow, Pagination]}
 				className={films ? styles.swiper : styles.swiper_hidden}
 				effect={'coverflow'}
+				grabCursor={true}
+				centeredSlides={true}
 				coverflowEffect={{
-					rotate: 10,
+					rotate: 5,
 					stretch: 0,
 					depth: 100,
 					modifier: 1,
 					slideShadows: true,
 				}}
+				slideToClickedSlide={true}
 			>
 				<SwiperSlide
 					className={styles.films_list_item}
