@@ -161,7 +161,8 @@ export default function App() {
 	const Mobile = () => {
 		return (
 			<Swiper
-				slidesPerView={1.25}
+				// slidesPerView={1.25}
+				slidesPerView={3}
 				mousewheel={true}
 				spaceBetween={16}
 				grabCursor={true}
