@@ -116,10 +116,12 @@ $baseDelay: 2000ms;
 @media (max-width: 768px) {
 	.credit,
 	.credit_text,
+	.credit_text_me,
 	.credit_text_bold {
 		line-height: 0.75rem;
 	}
 	.credit_text,
+	.credit_text_me,
 	.credit_text_bold {
 		font-size: 6px;
 	}
