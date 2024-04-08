@@ -2,6 +2,8 @@ import styles from './Ticker.module.scss';
 import Link from 'next/link';
 import InputContextProvider from '@/store/inputContext';
 import { useContext, useEffect } from 'react';
+import Marquee from 'react-fast-marquee';
+
 export default function Credits() {
 	const designer = `Frederic Cartier`;
 	const currentYear = new Date().getFullYear();
@@ -20,29 +22,7 @@ export default function Credits() {
 				<Link
 					href="https://www.thomasmatlock.com"
 					target="_blank"
-					className={styles.credit_text}
-					style={{ cursor: 'pointer' }}
-				>
-					{dev}
-				</Link>
-				<p className={styles.divider}>{divider}</p>
-				<p className={styles.credit_text}>{regular}</p>
-				<p className={styles.credit_text_bold}>{designer}</p>
-				<Link
-					href="https://www.thomasmatlock.com"
-					target="_blank"
-					className={styles.credit_text}
-					style={{ cursor: 'pointer' }}
-				>
-					{dev}
-				</Link>
-				<p className={styles.divider}>{divider}</p>
-				<p className={styles.credit_text}>{regular}</p>
-				<p className={styles.credit_text_bold}>{designer}</p>
-				<Link
-					href="https://www.thomasmatlock.com"
-					target="_blank"
-					className={styles.credit_text}
+					className={styles.credit_text_me}
 					style={{ cursor: 'pointer' }}
 				>
 					{dev}
@@ -57,11 +37,39 @@ export default function Credits() {
 				filter: about || films ? 'blur(1rem)' : 'none',
 			}}
 		>
-			<Child />
-			{/* <Child /> */}
-			{/* <Child /> */}
-			{/* <Child /> */}
-			{/* <Child /> */}
+			<Marquee
+				direction="left"
+				pauseOnHover
+				speed={30}
+				autoFill
+				className={styles.credits}
+				style={
+					{
+						// filter: about || films ? 'blur(1rem)' : 'none',
+					}
+				}
+			>
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+			</Marquee>
 			<div className={styles.credit_overlay} />
 		</div>
 	);

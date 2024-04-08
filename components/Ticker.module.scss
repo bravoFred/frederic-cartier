@@ -40,7 +40,7 @@ $baseDelay: 2000ms;
 	justify-content: center;
 	align-items: center;
 	// border: 1px solid red;
-	position: absolute;
+	// position: absolute;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -51,21 +51,22 @@ $baseDelay: 2000ms;
 	white-space: nowrap;
 }
 .credit:nth-of-type(1) {
-	left: 0;
+	// left: 0;
 }
 .credit:nth-of-type(2) {
-	animation-delay: $baseDelay * $multiplier;
+	// animation-delay: $baseDelay * $multiplier;
 }
 .credit:nth-of-type(3) {
-	animation-delay: $baseDelay * 2 * $multiplier;
+	// animation-delay: $baseDelay * 2 * $multiplier;
 }
 .credit:nth-of-type(4) {
-	animation-delay: $baseDelay * 3 * $multiplier;
+	// animation-delay: $baseDelay * 3 * $multiplier;
 }
 .credit:nth-of-type(5) {
-	animation-delay: $baseDelay * 4 * $multiplier;
+	// animation-delay: $baseDelay * 4 * $multiplier;
 }
 .credit_text,
+.credit_text_me,
 .credit_text_bold {
 	display: flex;
 	flex-direction: row;
@@ -87,7 +88,6 @@ $baseDelay: 2000ms;
 	z-index: 2;
 	user-select: none;
 	pointer-events: none;
-	// border: 1px solid red;
 	background-image: linear-gradient(
 		to right,
 		rgba(0, 0, 0, 1) 2%,
@@ -97,8 +97,16 @@ $baseDelay: 2000ms;
 		rgba(0, 0, 0, 1) 98%
 	);
 }
-.credit_text {
+.credit_text,
+.credit_text_me {
 	opacity: 0.75;
+}
+.credit_text_me {
+	&:hover {
+		opacity: 1;
+		// color: red;
+	}
+	// opacity: 0.75;
 }
 .credit_text_bold {
 	font-weight: 900 !important;
@@ -123,9 +131,9 @@ $baseDelay: 2000ms;
 }
 @media (min-width: 768px) {
 	.credits {
-		&:hover {
-			box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.5);
-		}
+		// &:hover {
+		// 	box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.5);
+		// }
 	}
 }
 @keyframes marquee {
