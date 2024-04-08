@@ -36,6 +36,7 @@ export default function App() {
 				mousewheel={true}
 				spaceBetween={32}
 				loop={true}
+				speed={250}
 				autoplay={{
 					delay: 2500,
 					disableOnInteraction: true,
@@ -100,6 +101,7 @@ export default function App() {
 				spaceBetween={32}
 				grabCursor={false}
 				centeredSlides={true}
+				speed={250}
 				// direction={mobile ? 'vertical' : 'horizontal'}
 				loop={true}
 				// pagination={{
@@ -168,6 +170,7 @@ export default function App() {
 				grabCursor={true}
 				centeredSlides={true}
 				direction={'vertical'}
+				speed={250}
 				loop={true}
 				pagination={{
 					clickable: true,
