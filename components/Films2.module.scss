@@ -14,9 +14,14 @@
 	// overflow: auto;
 	padding: 1rem;
 }
+.swiper {
+	z-index: 10;
+}
 .swiper_hidden * {
+	z-index: 10;
 	transition: all 0.25s ease-in-out;
 	opacity: 0;
+	z-index: -1;
 	// transform: scale(0);
 	pointer-events: none;
 	// font-size: 0px;
