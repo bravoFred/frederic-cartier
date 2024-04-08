@@ -32,7 +32,7 @@ export default function App() {
 	const Desktop = () => {
 		return (
 			<Swiper
-				slidesPerView={mobile ? 1.25 : 3.5}
+				slidesPerView={3}
 				mousewheel={true}
 				spaceBetween={mobile ? 16 : 32}
 				grabCursor={true}
@@ -92,53 +92,18 @@ export default function App() {
 				>
 					{filmsData[4].title}
 				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[0].id)}
-					key={filmsData[0].id}
-				>
-					{filmsData[0].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[1].id)}
-					key={filmsData[1].id}
-				>
-					{filmsData[1].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[2].id)}
-					key={filmsData[2].id}
-				>
-					{filmsData[2].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[3].id)}
-					key={filmsData[3].id}
-				>
-					{filmsData[3].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[4].id)}
-					key={filmsData[4].id}
-				>
-					{filmsData[4].title}
-				</SwiperSlide>
 			</Swiper>
 		);
 	};
 	const Mobile = () => {
 		return (
 			<Swiper
-				slidesPerView={mobile ? 1.25 : 3.5}
+				slidesPerView={1.25}
 				mousewheel={true}
-				spaceBetween={mobile ? 16 : 32}
+				spaceBetween={16}
 				grabCursor={true}
 				centeredSlides={true}
-				direction={mobile ? 'vertical' : 'horizontal'}
+				direction={'vertical'}
 				loop={true}
 				pagination={{
 					clickable: true,
@@ -159,41 +124,6 @@ export default function App() {
 				// 	slideShadows: mobile ? false : true,
 				// }}
 			>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[0].id)}
-					key={filmsData[0].id}
-				>
-					{filmsData[0].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[1].id)}
-					key={filmsData[1].id}
-				>
-					{filmsData[1].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[2].id)}
-					key={filmsData[2].id}
-				>
-					{filmsData[2].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[3].id)}
-					key={filmsData[3].id}
-				>
-					{filmsData[3].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[4].id)}
-					key={filmsData[4].id}
-				>
-					{filmsData[4].title}
-				</SwiperSlide>
 				<SwiperSlide
 					className={styles.films_list_item}
 					onClick={() => clickHandler(filmsData[0].id)}
