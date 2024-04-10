@@ -55,26 +55,9 @@ export default function MainVideo() {
 			{/* use playback id not asset id */}
 			<MuxPlayer
 				className={styles.mux_player}
-				// autoPlay
-				// muted
-				// test video
-				// playbackId="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-				// volta video
-				// playbackId="PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ"
 				playbackId="Mi5p7ncpuEh6BT6epoEd026jOxyOKmebgategcY54nb4"
-				// window video
-				// playbackId="c5GKCMXvMyTwUaTKl6DdsrUMgF28hkYDjn01NOR6Vui00"
-				// metadata={{
-				// 	video_id: 'video-id-54321',
-				// 	video_title: 'Test video title',
-				// 	viewer_user_id: 'user-id-007',
-				// }}
 				thumbnailTime={80}
-				//volta thumbnail
-				// poster="https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.png?width=3840&height=1634&time=80"
 				poster="https://image.mux.com/PlOtKFblHHPcnEo014WY8K35eBsp3cFGK44daYCepOPQ/thumbnail.webp?width=3840&height=1634&time=80"
-				// window thumbnail
-				// poster="https://image.mux.com/c5GKCMXvMyTwUaTKl6DdsrUMgF28hkYDjn01NOR6Vui00/thumbnail.png?width=1280&height=720&time=0"
 				accent-color="#1a1a1a"
 			/>
 			{/* <p className={styles.title}>Mux</p>

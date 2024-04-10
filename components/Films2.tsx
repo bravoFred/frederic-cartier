@@ -22,9 +22,9 @@ export default function App() {
 	const { films } = useContext(InputContextProvider);
 	const { mobile } = useContext(UserContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
-	const [selectedFilm, setSelectedFilm] = useState(null);
-	const clickHandler = (id) => {
-		console.log('clicked', id);
+	const clickHandler = (swiper) => {
+		console.log(swiper.activeIndex);
+
 		// setSelectedFilm(id);
 		// go to selected film page
 	};
@@ -54,40 +54,21 @@ export default function App() {
 					slideShadows: true,
 				}}
 				slideToClickedSlide={true}
+				onClick={(swiper) => clickHandler(swiper)}
 			>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[0].id)}
-					key={filmsData[0].id}
-				>
+				<SwiperSlide className={styles.films_list_item} key={filmsData[0].id}>
 					{filmsData[0].title}
 				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[1].id)}
-					key={filmsData[1].id}
-				>
+				<SwiperSlide className={styles.films_list_item} key={filmsData[1].id}>
 					{filmsData[1].title}
 				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[2].id)}
-					key={filmsData[2].id}
-				>
+				<SwiperSlide className={styles.films_list_item} key={filmsData[2].id}>
 					{filmsData[2].title}
 				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[3].id)}
-					key={filmsData[3].id}
-				>
+				<SwiperSlide className={styles.films_list_item} key={filmsData[3].id}>
 					{filmsData[3].title}
 				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					onClick={() => clickHandler(filmsData[4].id)}
-					key={filmsData[4].id}
-				>
+				<SwiperSlide className={styles.films_list_item} key={filmsData[4].id}>
 					{filmsData[4].title}
 				</SwiperSlide>
 			</Swiper>
