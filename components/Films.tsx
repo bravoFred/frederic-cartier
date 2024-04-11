@@ -24,8 +24,8 @@ export default function App() {
 		useContext(InputContextProvider);
 	const { mobile } = useContext(UserContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
-	const realIndex = useRef(0);
 	const Desktop3D = () => {
+		const realIndex = useRef(0);
 		const swiperRef = useRef(null!);
 		// console.log(swiperRef.current);
 		const clickHandler = (swiper) => {
