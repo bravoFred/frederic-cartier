@@ -6,8 +6,7 @@ type props = {
 	show: boolean;
 	title: string;
 	description: string;
-	t;
-	team: [{ name: string; role: string }];
+	team: { name: string; role: string }[];
 };
 export default function MainVideo({ show, title, description, team }: props) {
 	return (
