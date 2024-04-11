@@ -6,9 +6,10 @@ import Content from './Content';
 import Modal from './Modal';
 import About from './About';
 import Films from './Films';
+import FilmsMobile from './FilmsMobile';
 import UserContext from '@/store/userContext';
 export default function Main() {
-	const { dev } = useContext(UserContext);
+	const { dev, mobile } = useContext(UserContext);
 	return (
 		<>
 			<Nav />
@@ -17,6 +18,7 @@ export default function Main() {
 			<Modal>
 				<About />
 				{dev && <Films />}
+				{dev && <FilmsMobile />}
 			</Modal>
 			<Credits />
 		</>

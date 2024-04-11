@@ -244,71 +244,10 @@ export default function App() {
 			</Swiper>
 		);
 	};
-	const Mobile = () => {
-		return (
-			<Swiper
-				// slidesPerView={1.25}
-				slidesPerView={3}
-				mousewheel={true}
-				spaceBetween={16}
-				grabCursor={true}
-				centeredSlides={true}
-				direction={'vertical'}
-				speed={250}
-				loop={true}
-				pagination={{
-					clickable: true,
-				}}
-				autoplay={{
-					delay: 2500,
-					disableOnInteraction: true,
-				}}
-				// modules={[Mousewheel, Autoplay, EffectCoverflow]}
-				modules={[Mousewheel, Autoplay]}
-				className={films ? styles.swiper : styles.swiper_hidden}
-				effect={'coverflow'}
-				// coverflowEffect={{
-				// 	rotate: 10,
-				// 	stretch: 0,
-				// 	depth: 100,
-				// 	modifier: 1,
-				// 	slideShadows: mobile ? false : true,
-				// }}
-				slideToClickedSlide={true}
-				// onClick={(swiper) => clickHandler(swiper)}
-			>
-				<SwiperSlide className={styles.films_list_item} key={filmsData[0].id}>
-					<Image
-						src={filmsData[0].poster}
-						alt={filmsData[0].title}
-						width={300}
-						height={450}
-						className={styles.films_list_item_image}
-					/>
-					<p className={styles.films_list_item_title}>{filmsData[0].title}</p>
-					<p className={styles.films_list_item_description}>{filmsData[0].description}</p>
-				</SwiperSlide>
-
-				<SwiperSlide className={styles.films_list_item} key={filmsData[1].id}>
-					<Image
-						src={filmsData[1].poster}
-						alt={filmsData[1].title}
-						width={300}
-						height={450}
-						className={styles.films_list_item_image}
-					/>
-					<p className={styles.films_list_item_title}>{filmsData[1].title}</p>
-					<p className={styles.films_list_item_description}>{filmsData[1].description}</p>
-				</SwiperSlide>
-			</Swiper>
-		);
-	};
 	return (
 		<>
 			{!mobile && <Desktop3D />}
 			{/* {!mobile && <DesktopFlat />} */}
-			{mobile && <Mobile />}
-			{/* <Mobile /> */}
 		</>
 	);
 }
