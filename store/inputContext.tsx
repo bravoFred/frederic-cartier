@@ -9,11 +9,13 @@ const InputContext = createContext({
 	showFilm3: false as any,
 	showFilm4: false as any,
 	showFilm5: false as any,
+	showFilm6: false as any,
 	toggleFilm1: () => {},
 	toggleFilm2: () => {},
 	toggleFilm3: () => {},
 	toggleFilm4: () => {},
 	toggleFilm5: () => {},
+	toggleFilm6: () => {},
 
 	setAbout: (value: boolean) => {},
 	setFilms: (value: boolean) => {},
@@ -34,11 +36,13 @@ export function InputContextProvider(props) {
 	const [showFilm3, setShowFilm3] = useState(false);
 	const [showFilm4, setShowFilm4] = useState(false);
 	const [showFilm5, setShowFilm5] = useState(false);
+	const [showFilm6, setShowFilm6] = useState(false);
 	const toggleFilm1 = () => setShowFilm1(!showFilm1);
 	const toggleFilm2 = () => setShowFilm2(!showFilm2);
 	const toggleFilm3 = () => setShowFilm3(!showFilm3);
 	const toggleFilm4 = () => setShowFilm4(!showFilm4);
 	const toggleFilm5 = () => setShowFilm5(!showFilm5);
+	const toggleFilm6 = () => setShowFilm6(!showFilm6);
 
 	function disableShowFilms() {
 		setShowFilm1(false);
@@ -46,6 +50,7 @@ export function InputContextProvider(props) {
 		setShowFilm3(false);
 		setShowFilm4(false);
 		setShowFilm5(false);
+		setShowFilm6(false);
 	}
 	function goToFilms() {
 		// router.push('/');
@@ -105,11 +110,13 @@ export function InputContextProvider(props) {
 				showFilm3,
 				showFilm4,
 				showFilm5,
+				showFilm6,
 				toggleFilm1,
 				toggleFilm2,
 				toggleFilm3,
 				toggleFilm4,
 				toggleFilm5,
+				toggleFilm6,
 				setAbout,
 				setFilms,
 				goToHome,

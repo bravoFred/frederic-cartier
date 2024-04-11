@@ -17,21 +17,32 @@ export default function Nav() {
 		showFilm3,
 		showFilm4,
 		showFilm5,
+		showFilm6,
 	} = useContext(InputContextProvider);
 	const [leftNavText, setLeftNavText] = useState('FILMS');
 	const [rightNavText, setRightNavText] = useState('ABOUT');
 	useEffect(() => {
 		if (about) setLeftNavText('ABOUT');
-		if (showFilm1 || showFilm2 || showFilm3 || showFilm4 || showFilm5) setLeftNavText('BACK');
-		if (!about && !showFilm1 && !showFilm2 && !showFilm3 && !showFilm4 && !showFilm5)
+		if (showFilm1 || showFilm2 || showFilm3 || showFilm4 || showFilm5 || showFilm6)
+			setLeftNavText('BACK');
+		if (
+			!about &&
+			!showFilm1 &&
+			!showFilm2 &&
+			!showFilm3 &&
+			!showFilm4 &&
+			!showFilm5 &&
+			!showFilm6
+		)
 			setLeftNavText('FILMS');
-	}, [about, showFilm1, showFilm2, showFilm3, showFilm4, showFilm5, films]);
+	}, [about, showFilm1, showFilm2, showFilm3, showFilm4, showFilm5, showFilm6, films]);
 	useEffect(() => {
 		if (!about && !films) setRightNavText('ABOUT');
 		if (films) setRightNavText('CLOSE');
 		if (about) setRightNavText('CLOSE');
-		if (showFilm1 || showFilm2 || showFilm3 || showFilm4 || showFilm5) setRightNavText('');
-	}, [about, films, showFilm1, showFilm2, showFilm3, showFilm4, showFilm5]);
+		if (showFilm1 || showFilm2 || showFilm3 || showFilm4 || showFilm5 || showFilm6)
+			setRightNavText('');
+	}, [about, films, showFilm1, showFilm2, showFilm3, showFilm4, showFilm5, showFilm6]);
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.nav_item} onClick={goToFilms}>

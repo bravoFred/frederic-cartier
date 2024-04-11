@@ -16,11 +16,12 @@ import { useContext } from 'react';
 import InputContextProvider from '@/store/inputContext';
 import DataContextProvider from '@/store/dataContext';
 import UserContextProvider from '@/store/userContext';
-import FilmsVideoPlayer from './FilmsVideoPlayer';
+import FilmsVideoPlayer from './FilmsPlayer';
 import 'swiper/css/effect-coverflow';
 
 export default function App() {
-	const { films, showFilm1, toggleFilm1 } = useContext(InputContextProvider);
+	const { films, showFilm1, toggleFilm1, showFilm2, showFilm3, showFilm4, showFilm5, showFilm6 } =
+		useContext(InputContextProvider);
 	const { mobile } = useContext(UserContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
 	const [activeIndex, setActiveIndex] = useState(2);
@@ -44,6 +45,20 @@ export default function App() {
 
 		return (
 			<>
+				<div
+					className={styles.swiper_overlay}
+					style={{
+						opacity:
+							showFilm1 ||
+							showFilm2 ||
+							showFilm3 ||
+							showFilm4 ||
+							showFilm5 ||
+							showFilm6
+								? 0
+								: 1,
+					}}
+				></div>
 				<Swiper
 					ref={swiperRef}
 					slidesPerView={3}
@@ -88,16 +103,69 @@ export default function App() {
 						</p>
 					</SwiperSlide>
 					<SwiperSlide className={styles.films_list_item} key={filmsData[1].id}>
-						{filmsData[1].title}
+						<Image
+							src={filmsData[1].poster}
+							alt={filmsData[1].title}
+							width={300}
+							height={450}
+							className={styles.films_list_item_image}
+						/>
+						<p className={styles.films_list_item_title}>{filmsData[1].title}</p>
+						<p className={styles.films_list_item_description}>
+							{filmsData[1].description}
+						</p>
 					</SwiperSlide>
 					<SwiperSlide className={styles.films_list_item} key={filmsData[2].id}>
-						{filmsData[2].title}
+						<Image
+							src={filmsData[2].poster}
+							alt={filmsData[2].title}
+							width={300}
+							height={450}
+							className={styles.films_list_item_image}
+						/>
+						<p className={styles.films_list_item_title}>{filmsData[2].title}</p>
+						<p className={styles.films_list_item_description}>
+							{filmsData[2].description}
+						</p>
 					</SwiperSlide>
 					<SwiperSlide className={styles.films_list_item} key={filmsData[3].id}>
-						{filmsData[3].title}
+						<Image
+							src={filmsData[3].poster}
+							alt={filmsData[3].title}
+							width={300}
+							height={450}
+							className={styles.films_list_item_image}
+						/>
+						<p className={styles.films_list_item_title}>{filmsData[3].title}</p>
+						<p className={styles.films_list_item_description}>
+							{filmsData[3].description}
+						</p>
 					</SwiperSlide>
 					<SwiperSlide className={styles.films_list_item} key={filmsData[4].id}>
-						{filmsData[4].title}
+						<Image
+							src={filmsData[4].poster}
+							alt={filmsData[4].title}
+							width={300}
+							height={450}
+							className={styles.films_list_item_image}
+						/>
+						<p className={styles.films_list_item_title}>{filmsData[4].title}</p>
+						<p className={styles.films_list_item_description}>
+							{filmsData[4].description}
+						</p>
+					</SwiperSlide>
+					<SwiperSlide className={styles.films_list_item} key={filmsData[5].id}>
+						<Image
+							src={filmsData[5].poster}
+							alt={filmsData[5].title}
+							width={300}
+							height={450}
+							className={styles.films_list_item_image}
+						/>
+						<p className={styles.films_list_item_title}>{filmsData[5].title}</p>
+						<p className={styles.films_list_item_description}>
+							{filmsData[5].description}
+						</p>
 					</SwiperSlide>
 				</Swiper>
 				<FilmsVideoPlayer
