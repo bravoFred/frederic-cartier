@@ -24,7 +24,7 @@ export default function App() {
 		useContext(InputContextProvider);
 	const { mobile } = useContext(UserContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
-	const [activeIndex, setActiveIndex] = useState(2);
+	const realIndex = useRef(0);
 	const Desktop3D = () => {
 		const swiperRef = useRef(null!);
 		// console.log(swiperRef.current);
@@ -40,7 +40,8 @@ export default function App() {
 		};
 		const swipeHandler = (swiper) => {
 			swiperRef.current.swiper.slideTo(swiper.activeIndex);
-			console.log(swiperRef.current.swiper.activeIndex);
+			console.log(swiperRef.current.swiper.realIndex);
+			realIndex.current = swiperRef.current.swiper.realIndex;
 		};
 
 		return (

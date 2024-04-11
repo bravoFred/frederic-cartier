@@ -73,7 +73,6 @@ $multiplier: 0.5;
 .films_list_item_team_name,
 .films_list_item_team_role,
 .films_list_item_description {
-	// font-size: 1rem;
 	color: white;
 	// text-align: left;
 	display: flex;
@@ -104,8 +103,13 @@ $multiplier: 0.5;
 	justify-content: flex-start;
 	align-items: flex-start;
 	text-align: left;
-	// margin: 0.5rem 0;
+	margin: 0;
+	line-height: 0.5rem;
+	// margin-top: 0.5rem;
 	// border: 1px solid red;
+}
+.team_member:nth-of-type(1) {
+	margin-top: 12px;
 }
 .films_list_item_team_name {
 	padding-right: 4px;
@@ -116,11 +120,11 @@ $multiplier: 0.5;
 }
 .films_list_item_team_name,
 .films_list_item_team_role {
+	text-transform: uppercase;
 	width: auto;
 	margin: 0.25rem 0;
-	font-size: 0.75rem;
-	// border: 1px solid red;
 	font-weight: 300;
+	font-size: 9px;
 }
 
 .video_player {
