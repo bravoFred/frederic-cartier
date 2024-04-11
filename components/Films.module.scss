@@ -55,7 +55,6 @@
 .films_list_item,
 .films_list_item_selected,
 .films_list_item_active {
-	border-radius: 4px;
 	overflow: hidden;
 	user-select: none;
 	z-index: 10;
@@ -87,6 +86,8 @@
 	height: auto;
 	max-height: 33vh;
 	object-fit: cover;
+	border-radius: 4px;
+	overflow: hidden;
 }
 .films_list_item_title,
 .films_list_item_team_title,
