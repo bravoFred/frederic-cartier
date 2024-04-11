@@ -5,7 +5,7 @@ import Credits from './Ticker';
 import Content from './Content';
 import Modal from './Modal';
 import About from './About';
-import Films from './Films2';
+import Films from './Films';
 import UserContext from '@/store/userContext';
 export default function Main() {
 	const { dev } = useContext(UserContext);
@@ -17,7 +17,6 @@ export default function Main() {
 			<Modal>
 				<About />
 				{dev && <Films />}
-				{/* <Films /> */}
 			</Modal>
 			<Credits />
 		</>
