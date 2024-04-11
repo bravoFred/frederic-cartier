@@ -27,7 +27,7 @@ export default function App() {
 	const [activeIndex, setActiveIndex] = useState(2);
 	const Desktop3D = () => {
 		const swiperRef = useRef(null!);
-		console.log(swiperRef.current);
+		// console.log(swiperRef.current);
 		const clickHandler = (swiper) => {
 			swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			console.log(swiperRef.current.swiper.activeIndex);
@@ -61,7 +61,7 @@ export default function App() {
 				></div>
 				<Swiper
 					ref={swiperRef}
-					slidesPerView={3}
+					slidesPerView={3.5}
 					mousewheel={true}
 					spaceBetween={32}
 					loop={true}
@@ -71,12 +71,13 @@ export default function App() {
 					// 	disableOnInteraction: true,
 					// }}
 					modules={[Mousewheel, Autoplay, EffectCoverflow, Pagination]}
+					// modules={[Mousewheel, Autoplay, Pagination]}
 					className={films ? styles.swiper : styles.swiper_hidden}
 					effect={'coverflow'}
 					grabCursor={true}
 					centeredSlides={true}
 					coverflowEffect={{
-						rotate: 5,
+						rotate: 0,
 						stretch: 0,
 						depth: 100,
 						modifier: 1,
