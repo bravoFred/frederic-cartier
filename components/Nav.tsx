@@ -6,8 +6,19 @@ import InputContextProvider from '../store/inputContext';
 import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
-	const { about, films, goToHome, goToFilms, goToAbout } = useContext(InputContextProvider);
-	// console.log(`films: ${films}, about: ${about}`);
+	useEffect(() => {}, []);
+	const {
+		about,
+		films,
+		goToHome,
+		goToFilms,
+		goToAbout,
+		showFilm1,
+		showFilm2,
+		showFilm3,
+		showFilm4,
+		showFilm5,
+	} = useContext(InputContextProvider);
 
 	return (
 		<nav className={styles.nav}>

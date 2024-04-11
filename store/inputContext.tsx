@@ -40,18 +40,30 @@ export function InputContextProvider(props) {
 	const toggleFilm4 = () => setShowFilm4(!showFilm4);
 	const toggleFilm5 = () => setShowFilm5(!showFilm5);
 
+	function disableShowFilms() {
+		setShowFilm1(false);
+		setShowFilm2(false);
+		setShowFilm3(false);
+		setShowFilm4(false);
+		setShowFilm5(false);
+	}
 	function goToFilms() {
 		// router.push('/');
+		disableShowFilms();
 		if (films || about) return;
 		setAbout(false);
 		setFilms(!films);
 	}
 	function goToHome() {
+		disableShowFilms();
+
 		// router.push('/');
 		setAbout(false);
 		setFilms(false);
 	}
 	function goToAbout() {
+		disableShowFilms();
+
 		if (films) goToHome();
 		if (!films) setAbout(!about);
 	}

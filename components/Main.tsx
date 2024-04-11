@@ -14,7 +14,7 @@ export default function Main() {
 			<Content />
 			<Modal>
 				<About />
-				{/* {dev && <Films />} */}
+				{dev && <Films />}
 				{/* <Films /> */}
 			</Modal>
 			<Credits />
