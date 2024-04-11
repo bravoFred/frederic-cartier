@@ -6,7 +6,6 @@ import InputContextProvider from '../store/inputContext';
 import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
-	useEffect(() => {}, []);
 	const {
 		about,
 		films,
@@ -19,47 +18,30 @@ export default function Nav() {
 		showFilm4,
 		showFilm5,
 	} = useContext(InputContextProvider);
-
+	const [leftNavText, setLeftNavText] = useState('FILMS');
+	const [rightNavText, setRightNavText] = useState('ABOUT');
+	useEffect(() => {
+		if (about) setLeftNavText('ABOUT');
+		if (showFilm1 || showFilm2 || showFilm3 || showFilm4 || showFilm5) setLeftNavText('BACK');
+		if (!about && !showFilm1 && !showFilm2 && !showFilm3 && !showFilm4 && !showFilm5)
+			setLeftNavText('FILMS');
+	}, [about, showFilm1, showFilm2, showFilm3, showFilm4, showFilm5, films]);
+	useEffect(() => {
+		if (!about && !films) setRightNavText('ABOUT');
+		if (films) setRightNavText('CLOSE');
+		if (about) setRightNavText('CLOSE');
+		if (showFilm1 || showFilm2 || showFilm3 || showFilm4 || showFilm5) setRightNavText('');
+	}, [about, films, showFilm1, showFilm2, showFilm3, showFilm4, showFilm5]);
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.nav_item} onClick={goToFilms}>
-				<p
-					className={
-						about ? styles.nav_item_text_fadeOutLeft : styles.nav_item_text_fadeInLeft
-					}
-				>
-					FILMS
-				</p>
-				<p
-					className={
-						about ? styles.nav_item_text_fadeInRight : styles.nav_item_text_fadeOutRight
-					}
-				>
-					ABOUT
-				</p>
+				<p>{leftNavText}</p>
 			</div>
 			<div className={styles.nav_item} onClick={goToHome}>
 				<p className={styles.nav_item_text}>FREDERIC CARTIER</p>
 			</div>
 			<div className={styles.nav_item} onClick={goToAbout}>
-				<p
-					className={
-						about || films
-							? styles.nav_item_text_fadeOutLeft
-							: styles.nav_item_text_fadeInLeft
-					}
-				>
-					ABOUT
-				</p>
-				<p
-					className={
-						about || films
-							? styles.nav_item_text_fadeInRight
-							: styles.nav_item_text_fadeOutRight
-					}
-				>
-					CLOSE
-				</p>
+				<p>{rightNavText}</p>
 			</div>
 		</nav>
 	);

@@ -1,6 +1,6 @@
 import { useRef, useState, useContext } from 'react';
-import NavNonAnimated from './NavNonAnimated';
 import Nav from './Nav';
+import NavAnimated from './NavAnimated';
 import Credits from './Ticker';
 import Content from './Content';
 import Modal from './Modal';
@@ -11,8 +11,8 @@ export default function Main() {
 	const { dev } = useContext(UserContext);
 	return (
 		<>
-			{/* <Nav /> */}
-			<NavNonAnimated />
+			<Nav />
+			{/* <NavAnimated /> */}
 			<Content />
 			<Modal>
 				<About />
