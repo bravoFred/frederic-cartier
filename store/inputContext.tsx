@@ -53,7 +53,6 @@ export function InputContextProvider(props) {
 		setShowFilm6(false);
 	}
 	function goToFilms() {
-		// router.push('/');
 		disableShowFilms();
 		if (films || about) return;
 		setAbout(false);
@@ -61,8 +60,6 @@ export function InputContextProvider(props) {
 	}
 	function goToHome() {
 		disableShowFilms();
-
-		// router.push('/');
 		setAbout(false);
 		setFilms(false);
 	}
