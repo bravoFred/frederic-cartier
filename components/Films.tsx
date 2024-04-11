@@ -31,17 +31,21 @@ export default function App() {
 		const clickHandler = (swiper) => {
 			swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			console.log(swiperRef.current.swiper.activeIndex);
+			console.log('click');
+
 			// console.log(swiper.current);
 		};
 		const doubleClickHandler = (swiper) => {
 			swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			console.log(swiperRef.current.swiper.activeIndex);
 			toggleFilm1();
+			console.log('double');
 		};
 		const swipeHandler = (swiper) => {
 			swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			console.log(swiperRef.current.swiper.realIndex);
 			realIndex.current = swiperRef.current.swiper.realIndex;
+			console.log('swipe');
 		};
 
 		return (

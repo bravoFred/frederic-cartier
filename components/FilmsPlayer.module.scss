@@ -51,6 +51,7 @@ $multiplier: 0.5;
 	display: flex;
 	flex-direction: row;
 }
+
 .video_details_panel {
 	// border: 1px solid red;
 	width: 100%;
@@ -130,4 +131,28 @@ $multiplier: 0.5;
 .video_player {
 	width: 100%;
 	height: 100%;
+}
+@media (max-width: 768px) {
+	.player_wrapper {
+		width: 100%;
+	}
+	.video_details_panel {
+		padding: 2rem;
+	}
+	.video_details {
+		flex-direction: column;
+		// border: 1px solid red;
+	}
+	.video_details_panel:nth-of-type(2) {
+		margin-left: 0rem;
+	}
+	.video_details_panel {
+		margin: 0;
+	}
+	.films_list_item_title,
+	.films_list_item_team_title {
+		font-size: 1rem;
+		text-transform: uppercase;
+		margin-top: 0rem;
+	}
 }

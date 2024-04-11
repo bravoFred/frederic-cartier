@@ -26,25 +26,26 @@ export default function App() {
 	const { mobile } = useContext(UserContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
 	const [activeIndex, setActiveIndex] = useState(2);
+	const swiperRef = useRef(null!);
 	const Mobile = () => {
-		const swiperRef = useRef(null!);
 		const realIndex = useRef(0);
 
 		// console.log(swiperRef.current);
 		const clickHandler = (swiper) => {
-			swiperRef.current.swiper.slideTo(swiper.activeIndex);
-			console.log(swiperRef.current.swiper.activeIndex);
+			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
+			// console.log(swiperRef.current.swiper.activeIndex);
 			// console.log(swiper.current);
 		};
 		const doubleClickHandler = (swiper) => {
-			swiperRef.current.swiper.slideTo(swiper.activeIndex);
-			console.log(swiperRef.current.swiper.activeIndex);
+			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
+			// console.log(swiperRef.current.swiper.activeIndex);
 			toggleFilm1();
 		};
 		const swipeHandler = (swiper) => {
 			swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			console.log(swiperRef.current.swiper.realIndex);
 			realIndex.current = swiperRef.current.swiper.realIndex;
+			console.log('swipe');
 		};
 		return (
 			<>
@@ -76,6 +77,7 @@ export default function App() {
 					onDoubleClick={(swiper) => doubleClickHandler(swiper)}
 					onDoubleTap={(swiper) => doubleClickHandler(swiper)}
 					onScroll={(swiper) => swipeHandler(swiper)}
+					onTap={(swiper) => clickHandler(swiper)}
 				>
 					<SwiperSlide className={styles.films_list_item} key={filmsData[0].id}>
 						<Image
