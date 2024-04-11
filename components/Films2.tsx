@@ -71,6 +71,7 @@ export default function App() {
 					slideToClickedSlide={true}
 					onClick={(swiper) => clickHandler(swiper)}
 					onDoubleClick={(swiper) => doubleClickHandler(swiper)}
+					onDoubleTap={(swiper) => doubleClickHandler(swiper)}
 					onScroll={(swiper) => swipeHandler(swiper)}
 				>
 					<SwiperSlide className={styles.films_list_item} key={filmsData[0].id}>
