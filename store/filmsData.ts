@@ -17,6 +17,10 @@ const data = [
 				name: 'Frederic Cartier',
 				role: 'Director',
 			},
+			{
+				name: 'Hans Zimmer',
+				role: 'Composer',
+			},
 		],
 	},
 	{

@@ -4,6 +4,17 @@ import { useRouter } from 'next/router';
 const InputContext = createContext({
 	about: true as any,
 	films: true as any,
+	showFilm1: false as any,
+	showFilm2: false as any,
+	showFilm3: false as any,
+	showFilm4: false as any,
+	showFilm5: false as any,
+	toggleFilm1: () => {},
+	toggleFilm2: () => {},
+	toggleFilm3: () => {},
+	toggleFilm4: () => {},
+	toggleFilm5: () => {},
+
 	setAbout: (value: boolean) => {},
 	setFilms: (value: boolean) => {},
 	goToHome: () => {},
@@ -18,6 +29,16 @@ export function InputContextProvider(props) {
 	const [testAbout, setTestAbout] = useState(false);
 	const [films, setFilms] = useState(testFilms);
 	const [about, setAbout] = useState(testAbout);
+	const [showFilm1, setShowFilm1] = useState(false);
+	const [showFilm2, setShowFilm2] = useState(false);
+	const [showFilm3, setShowFilm3] = useState(false);
+	const [showFilm4, setShowFilm4] = useState(false);
+	const [showFilm5, setShowFilm5] = useState(false);
+	const toggleFilm1 = () => setShowFilm1(!showFilm1);
+	const toggleFilm2 = () => setShowFilm2(!showFilm2);
+	const toggleFilm3 = () => setShowFilm3(!showFilm3);
+	const toggleFilm4 = () => setShowFilm4(!showFilm4);
+	const toggleFilm5 = () => setShowFilm5(!showFilm5);
 
 	function goToFilms() {
 		// router.push('/');
@@ -67,6 +88,16 @@ export function InputContextProvider(props) {
 			value={{
 				about,
 				films,
+				showFilm1,
+				showFilm2,
+				showFilm3,
+				showFilm4,
+				showFilm5,
+				toggleFilm1,
+				toggleFilm2,
+				toggleFilm3,
+				toggleFilm4,
+				toggleFilm5,
 				setAbout,
 				setFilms,
 				goToHome,

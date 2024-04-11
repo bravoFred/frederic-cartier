@@ -9,7 +9,7 @@
 	justify-content: center;
 	align-items: center;
 	// border: 1px solid #000;
-	height: 50%;
+	height: 66%;
 	width: 100%;
 	// overflow: auto;
 	padding: 1rem;
@@ -46,16 +46,47 @@
 	// padding: 1rem;
 	// border: 1px solid #000;
 	// width: 25vw;
-	height: 9rem;
+	// height: 9rem;
 	height: 100%;
-	width: calc(100%);
+	width: 100%;
 	// flex: 1;
 	transition: all 0.25s ease-in-out;
-	background-color: white;
+	// background-color: white;
 	margin: 0;
 	color: black;
-	&:hover {
-	}
+}
+.films_list_item_image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.films_list_item_title,
+.films_list_item_team_title,
+.films_list_item_team_member,
+.films_list_item_team_role,
+.films_list_item_description {
+	// font-size: 1rem;
+	color: white;
+	// text-align: left;
+	display: flex;
+	// border: 1px solid #000;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	// text-align: left;
+}
+.films_list_item_title,
+.films_list_item_team_title {
+	font-size: 1rem;
+	margin: 0;
+	margin-top: 1.25rem;
+}
+.films_list_item_description {
+	margin-top: 1rem;
+	font-size: 10px;
+	font-weight: 300;
 }
 .films_list_item_selected {
 	// z-index: 20;
@@ -72,11 +103,4 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
 }

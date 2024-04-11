@@ -1,0 +1,129 @@
+@import '@/styles/Main.module.scss';
+
+$ratio: 16 / 9;
+$multiplier: 0.5;
+.video,
+.video_hidden {
+	position: absolute;
+	display: flex;
+	// top: 4rem;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	// border: 1px solid red;
+	background-color: black;
+	transition: all 0.25s ease-in-out;
+}
+.video {
+	z-index: 10;
+}
+.video_hidden {
+	z-index: -1;
+	opacity: 0;
+	pointer-events: none;
+}
+.video * {
+	font-family:
+		Helvetica Neue,
+		sans-serif;
+	font-weight: 700;
+	animation: fadeIn 1s ease-in-out;
+}
+.player_wrapper {
+	width: 66%;
+	height: auto;
+	// border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0 auto;
+	// overflow: hidden;
+}
+.video_details,
+.video_details_panel {
+	// border: 1px solid red;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.video_details_panel {
+	// border: 1px solid red;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0;
+}
+.video_details_panel:nth-of-type(1) {
+	// border: 1px solid red;
+	flex: 1;
+}
+.video_details_panel:nth-of-type(2) {
+	// border: 1px solid red;
+	flex: 2;
+	margin-left: 2rem;
+}
+.films_list_item_title,
+.films_list_item_team_title,
+.films_list_item_team_name,
+.films_list_item_team_role,
+.films_list_item_description {
+	// font-size: 1rem;
+	color: white;
+	// text-align: left;
+	display: flex;
+	// border: 1px solid #000;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	// text-align: left;
+}
+.films_list_item_title,
+.films_list_item_team_title {
+	font-size: 1rem;
+	margin: 0;
+	text-transform: uppercase;
+	margin-top: 1.25rem;
+}
+.films_list_item_description {
+	margin-top: 1rem;
+	font-size: 10px;
+	font-weight: 300;
+}
+.team_member {
+	display: flex;
+	width: auto;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+	// margin: 0.5rem 0;
+	// border: 1px solid red;
+}
+.films_list_item_team_name {
+	padding-right: 4px;
+	// border: 1px solid red;
+}
+.films_list_item_team_role {
+	font-style: italic;
+}
+.films_list_item_team_name,
+.films_list_item_team_role {
+	width: auto;
+	margin: 0.25rem 0;
+	font-size: 0.75rem;
+	// border: 1px solid red;
+	font-weight: 300;
+}
+
+.video_player {
+	width: 100%;
+	height: 100%;
+}
