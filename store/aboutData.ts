@@ -16,11 +16,11 @@ const data = {
 				urlLabel: email,
 				url: emailURL,
 			},
-			{
-				title: 'Instagram',
-				urlLabel: '@bravoFred_',
-				url: 'https://www.instagram.com/bravoFred_',
-			},
+			// {
+			// 	title: 'Instagram',
+			// 	urlLabel: '@bravoFred_',
+			// 	url: 'https://www.instagram.com/bravoFred_',
+			// },
 		],
 	},
 };
