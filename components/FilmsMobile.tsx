@@ -65,11 +65,8 @@ export default function App() {
 				></div>
 				<Swiper
 					slidesPerView={2}
-					// grid={{
-					// 	rows: 2,
-					// }}
 					mousewheel={true}
-					spaceBetween={16}
+					spaceBetween={32}
 					grabCursor={true}
 					centeredSlides={true}
 					direction={'vertical'}
@@ -78,10 +75,6 @@ export default function App() {
 					pagination={{
 						clickable: true,
 					}}
-					// autoplay={{
-					// 	delay: 2500,
-					// 	disableOnInteraction: true,
-					// }}
 					modules={[Mousewheel]}
 					className={films ? styles.swiper : styles.swiper_hidden}
 					// effect={'coverflow'}
