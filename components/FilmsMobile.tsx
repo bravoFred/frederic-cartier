@@ -72,9 +72,9 @@ export default function App() {
 					direction={'vertical'}
 					speed={500}
 					// loop={true}
-					pagination={{
-						clickable: true,
-					}}
+					// pagination={{
+					// 	clickable: true,
+					// }}
 					modules={[Mousewheel]}
 					className={films ? styles.swiper : styles.swiper_hidden}
 					// effect={'coverflow'}
