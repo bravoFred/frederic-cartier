@@ -64,7 +64,7 @@ export default function App() {
 					}}
 				></div>
 				<Swiper
-					slidesPerView={3}
+					slidesPerView={2}
 					// grid={{
 					// 	rows: 2,
 					// }}
@@ -74,7 +74,7 @@ export default function App() {
 					centeredSlides={true}
 					direction={'vertical'}
 					speed={250}
-					loop={true}
+					// loop={true}
 					pagination={{
 						clickable: true,
 					}}
@@ -131,45 +131,6 @@ export default function App() {
 						<p className={styles.films_list_item_title}>{filmsData[2].title}</p>
 						<p className={styles.films_list_item_description}>
 							{filmsData[2].description}
-						</p>
-					</SwiperSlide>
-					<SwiperSlide className={styles.films_list_item} key={filmsData[3].id}>
-						<Image
-							src={filmsData[3].poster}
-							alt={filmsData[3].title}
-							width={300}
-							height={450}
-							className={styles.films_list_item_image}
-						/>
-						<p className={styles.films_list_item_title}>{filmsData[3].title}</p>
-						<p className={styles.films_list_item_description}>
-							{filmsData[3].description}
-						</p>
-					</SwiperSlide>
-					<SwiperSlide className={styles.films_list_item} key={filmsData[4].id}>
-						<Image
-							src={filmsData[4].poster}
-							alt={filmsData[4].title}
-							width={300}
-							height={450}
-							className={styles.films_list_item_image}
-						/>
-						<p className={styles.films_list_item_title}>{filmsData[4].title}</p>
-						<p className={styles.films_list_item_description}>
-							{filmsData[4].description}
-						</p>
-					</SwiperSlide>
-					<SwiperSlide className={styles.films_list_item} key={filmsData[5].id}>
-						<Image
-							src={filmsData[5].poster}
-							alt={filmsData[5].title}
-							width={300}
-							height={450}
-							className={styles.films_list_item_image}
-						/>
-						<p className={styles.films_list_item_title}>{filmsData[5].title}</p>
-						<p className={styles.films_list_item_description}>
-							{filmsData[5].description}
 						</p>
 					</SwiperSlide>
 				</Swiper>

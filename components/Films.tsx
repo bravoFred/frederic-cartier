@@ -66,16 +66,16 @@ export default function App() {
 				></div>
 				<Swiper
 					ref={swiperRef}
-					slidesPerView={3.5}
+					slidesPerView={3}
 					mousewheel={true}
 					spaceBetween={32}
-					loop={true}
+					// loop={true}
 					speed={250}
 					// autoplay={{
 					// 	delay: 2500,
 					// 	disableOnInteraction: true,
 					// }}
-					modules={[Mousewheel, Autoplay, EffectCoverflow, Pagination]}
+					modules={[Mousewheel, EffectCoverflow]}
 					// modules={[Mousewheel, Autoplay, Pagination]}
 					className={films ? styles.swiper : styles.swiper_hidden}
 					effect={'coverflow'}
@@ -84,7 +84,7 @@ export default function App() {
 					coverflowEffect={{
 						rotate: 0,
 						stretch: 0,
-						depth: 100,
+						depth: 1,
 						modifier: 1,
 						slideShadows: false,
 					}}
@@ -134,45 +134,6 @@ export default function App() {
 							{filmsData[2].description}
 						</p>
 					</SwiperSlide>
-					<SwiperSlide className={styles.films_list_item} key={filmsData[3].id}>
-						<Image
-							src={filmsData[3].poster}
-							alt={filmsData[3].title}
-							width={300}
-							height={450}
-							className={styles.films_list_item_image}
-						/>
-						<p className={styles.films_list_item_title}>{filmsData[3].title}</p>
-						<p className={styles.films_list_item_description}>
-							{filmsData[3].description}
-						</p>
-					</SwiperSlide>
-					<SwiperSlide className={styles.films_list_item} key={filmsData[4].id}>
-						<Image
-							src={filmsData[4].poster}
-							alt={filmsData[4].title}
-							width={300}
-							height={450}
-							className={styles.films_list_item_image}
-						/>
-						<p className={styles.films_list_item_title}>{filmsData[4].title}</p>
-						<p className={styles.films_list_item_description}>
-							{filmsData[4].description}
-						</p>
-					</SwiperSlide>
-					<SwiperSlide className={styles.films_list_item} key={filmsData[5].id}>
-						<Image
-							src={filmsData[5].poster}
-							alt={filmsData[5].title}
-							width={300}
-							height={450}
-							className={styles.films_list_item_image}
-						/>
-						<p className={styles.films_list_item_title}>{filmsData[5].title}</p>
-						<p className={styles.films_list_item_description}>
-							{filmsData[5].description}
-						</p>
-					</SwiperSlide>
 				</Swiper>
 				<FilmsVideoPlayer
 					show={showFilm1}
@@ -193,7 +154,7 @@ export default function App() {
 				centeredSlides={true}
 				speed={250}
 				// direction={mobile ? 'vertical' : 'horizontal'}
-				loop={true}
+				// loop={true}
 				// pagination={{
 				// 	clickable: true,
 				// }}
