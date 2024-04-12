@@ -69,6 +69,66 @@ export default function Credits() {
 				<Child />
 				<Child />
 				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
+				<Child />
 			</Marquee>
 			<div className={styles.credit_overlay} />
 		</div>
