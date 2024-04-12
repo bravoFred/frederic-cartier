@@ -66,7 +66,7 @@ export default function App() {
 				<Swiper
 					slidesPerView={1.5}
 					mousewheel={true}
-					spaceBetween={32}
+					spaceBetween={48}
 					grabCursor={true}
 					centeredSlides={true}
 					direction={'vertical'}
