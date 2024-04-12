@@ -122,11 +122,47 @@ $baseDelay: 2000ms;
 .credit_my_name {
 	// font-weight: 900 !important;
 	// margin-left: -0.25rem;
-	margin-right: 4px;
+	// margin-right: 4px;
+}
+.credit_my_prefix {
+	margin-right: 0.25rem;
 }
 .credit_my_name {
 	font-weight: 900 !important;
 	// opacity: 0.9;
+}
+.credit_social,
+.credit_social_ig,
+.credit_social_linkedin,
+.credit_social_vimeo {
+	display: flex;
+	flex-direction: row;
+	font-size: 8px;
+	text-align: center;
+	color: #fff;
+	padding: 0;
+	margin: 0 0.25rem;
+	// margin: 0 0.5rem;
+	font-weight: 300 !important;
+	letter-spacing: 0.75px;
+	text-transform: uppercase;
+	line-height: 1rem;
+	opacity: 0.75;
+	&:hover * {
+		opacity: 1;
+	}
+}
+.credit_social_ig {
+	margin-left: 5px;
+}
+.credit_social_linkedin,
+.credit_social_vimeo {
+	// margin: 0rem;
+	margin-left: -4px;
+	// border: 1px solid red;
+}
+.credit_social_vimeo {
+	margin-right: 5px;
 }
 @media (max-width: 768px) {
 	.credit,

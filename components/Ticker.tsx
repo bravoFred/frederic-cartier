@@ -13,6 +13,9 @@ export default function Credits() {
 	const developer = `Thomas Matlock`;
 	const dev = ` ${developer}`;
 	const divider = '|';
+	const instagramURL = 'https://www.instagram.com/bravoFred_';
+	const linkedinURL = 'https://www.linkedin.com/in/frederic-cartier-bb2b8b111/';
+	const vimeoURL = 'https://vimeo.com/bravofred';
 	const Child = () => {
 		return (
 			<div className={styles.credit}>
@@ -28,6 +31,33 @@ export default function Credits() {
 					<p className={styles.credit_my_prefix}>DEVELOPMENT</p>
 					<p className={styles.credit_my_name}>{dev}</p>
 					{/* {dev} */}
+				</Link>
+				<p className={styles.divider}>{divider}</p>
+				<Link
+					href={instagramURL}
+					target="_blank"
+					className={styles.credit_social}
+					style={{ cursor: 'pointer' }}
+				>
+					<p className={styles.credit_social_ig}>INSTAGRAM</p>
+				</Link>
+				<Link
+					href={linkedinURL}
+					target="_blank"
+					className={styles.credit_social}
+					style={{ cursor: 'pointer' }}
+				>
+					{/* <p className={styles.credit_social_linkedin}>•</p> */}
+					<p className={styles.credit_social_linkedin}>LINKEDIN</p>
+				</Link>
+				<Link
+					href={vimeoURL}
+					target="_blank"
+					className={styles.credit_social}
+					style={{ cursor: 'pointer' }}
+				>
+					{/* <p className={styles.credit_social_vimeo}>•</p> */}
+					<p className={styles.credit_social_vimeo}>VIMEO</p>
 				</Link>
 			</div>
 		);
