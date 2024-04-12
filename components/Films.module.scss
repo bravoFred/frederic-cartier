@@ -159,3 +159,9 @@
 	justify-content: center;
 	align-items: center;
 }
+@media (max-width: 768px) {
+	.films_list_item_title,
+	.films_list_item_description {
+		opacity: 1;
+	}
+}
