@@ -70,7 +70,7 @@ export default function App() {
 					mousewheel={true}
 					spaceBetween={32}
 					// loop={true}
-					speed={250}
+					speed={500}
 					// autoplay={{
 					// 	delay: 2500,
 					// 	disableOnInteraction: true,

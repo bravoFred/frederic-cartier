@@ -70,7 +70,7 @@ export default function App() {
 					grabCursor={true}
 					centeredSlides={true}
 					direction={'vertical'}
-					speed={250}
+					speed={500}
 					// loop={true}
 					pagination={{
 						clickable: true,
