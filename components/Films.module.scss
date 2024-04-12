@@ -50,11 +50,33 @@
 	.swiper {
 		height: 100%;
 	}
+	.swiper_overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 1) 2%,
+			rgba(0, 0, 0, 0) 25%,
+			rgba(255, 0, 0, 0) 75%,
+
+			rgba(0, 0, 0, 1) 98%
+		);
+		z-index: 100;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+	}
 }
 
 .films_list_item,
 .films_list_item_selected,
 .films_list_item_active {
+	border-radius: 4px;
+
 	overflow: hidden;
 	user-select: none;
 	z-index: 10;

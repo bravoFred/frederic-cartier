@@ -34,21 +34,35 @@ export default function App() {
 		const clickHandler = (swiper) => {
 			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			// console.log(swiperRef.current.swiper.activeIndex);
+			toggleFilm1();
 			// console.log(swiper.current);
 		};
 		const doubleClickHandler = (swiper) => {
 			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			// console.log(swiperRef.current.swiper.activeIndex);
-			toggleFilm1();
 		};
 		const swipeHandler = (swiper) => {
-			swiperRef.current.swiper.slideTo(swiper.activeIndex);
-			console.log(swiperRef.current.swiper.realIndex);
-			realIndex.current = swiperRef.current.swiper.realIndex;
-			console.log('swipe');
+			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
+			// console.log(swiperRef.current.swiper.realIndex);
+			// realIndex.current = swiperRef.current.swiper.realIndex;
+			// console.log('swipe');
 		};
 		return (
 			<>
+				<div
+					className={styles.swiper_overlay}
+					style={{
+						opacity:
+							showFilm1 ||
+							showFilm2 ||
+							showFilm3 ||
+							showFilm4 ||
+							showFilm5 ||
+							showFilm6
+								? 0
+								: 1,
+					}}
+				></div>
 				<Swiper
 					slidesPerView={3}
 					// grid={{
