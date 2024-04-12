@@ -23,6 +23,9 @@ $baseDelay: 2000ms;
 	user-select: none;
 	transition: all 0.25s ease-in-out;
 }
+.credits * {
+	transition: all 0.25s ease-in-out;
+}
 
 .divider {
 	display: flex;
@@ -154,6 +157,30 @@ $baseDelay: 2000ms;
 }
 .credit_social_ig {
 	margin-left: 5px;
+	// opacity: 1;
+	&:hover {
+		// color: #da407e;
+		color: #da3e7f;
+		opacity: 1;
+	}
+}
+.credit_social_linkedin {
+	margin-left: 5px;
+	// opacity: 1;
+	&:hover {
+		// color: #da407e;
+		color: #0a64c2;
+		opacity: 1;
+	}
+}
+.credit_social_vimeo {
+	margin-left: 5px;
+	// opacity: 1;
+	&:hover {
+		// color: #da407e;
+		color: #14d4fe;
+		opacity: 1;
+	}
 }
 .credit_social_linkedin,
 .credit_social_vimeo {
