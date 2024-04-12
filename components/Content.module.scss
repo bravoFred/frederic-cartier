@@ -4,6 +4,9 @@
 	top: 4rem;
 	width: 100%;
 	height: calc(100% - 8rem);
+	// border: 1px solid red;
+	// width: calc(100vw - 8rem);
+	width: 100%;
 }
 
 .content * {
@@ -11,17 +14,21 @@
 	// filter: blur(2rem);
 }
 .content_hero {
+	position: absolute;
+	// border: 1px solid red;
 	width: 100%;
+	width: calc(100% - 8rem);
 	height: 100%;
-	// background-position: center;
-	// // background-size: cover;
-	// background-size: 50% 50%;
-	// background-repeat: no-repeat;
+	left: 4rem;
 }
 @media (max-width: 768px) {
+	.content {
+		width: 100%;
+	}
 	.content_hero {
-		width: 200%;
+		left: 0;
+		width: 250%;
 		height: 100%;
-		transform: translateX(-25%);
+		transform: translateX(-33%);
 	}
 }
