@@ -164,4 +164,9 @@
 	.films_list_item_description {
 		opacity: 1;
 	}
+	.films_list_item,
+	.films_list_item_selected,
+	.films_list_item_active {
+		min-height: 33vh;
+	}
 }
