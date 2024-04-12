@@ -110,6 +110,7 @@
 	object-fit: cover;
 	border-radius: 4px;
 	// overflow: hidden;
+	// transition: all 0s !important;
 }
 .films_list_item_title,
 .films_list_item_team_title,
@@ -139,7 +140,7 @@
 }
 .films_list_item_description {
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	// margin-bottom: 1rem;
 	font-size: 10px;
 	font-weight: 300 !important;
 	opacity: 0.25;
