@@ -67,7 +67,8 @@ $baseDelay: 2000ms;
 }
 .credit_text,
 .credit_text_me,
-.credit_text_bold {
+.credit_text_bold,
+.credit_my_prefix {
 	display: flex;
 	flex-direction: row;
 	font-size: 8px;
@@ -97,12 +98,12 @@ $baseDelay: 2000ms;
 		rgba(0, 0, 0, 1) 98%
 	);
 }
-.credit_text,
-.credit_text_me {
+.credit_text {
 	opacity: 0.75;
 }
 .credit_text_me {
-	&:hover {
+	// opacity: 1;
+	&:hover * {
 		opacity: 1;
 		// color: red;
 	}
@@ -111,8 +112,21 @@ $baseDelay: 2000ms;
 .credit_text_bold {
 	font-weight: 900 !important;
 	margin-left: -0.25rem;
+	margin-right: -2px;
 }
-
+.credit_my_prefix {
+	opacity: 0.75;
+}
+.credit_my_prefix,
+.credit_my_name {
+	// font-weight: 900 !important;
+	// margin-left: -0.25rem;
+	margin-right: 4px;
+}
+.credit_my_name {
+	font-weight: 900 !important;
+	// opacity: 0.9;
+}
 @media (max-width: 768px) {
 	.credit,
 	.credit_text,

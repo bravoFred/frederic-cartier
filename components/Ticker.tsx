@@ -11,7 +11,7 @@ export default function Credits() {
 	const { films, about } = useContext(InputContextProvider);
 
 	const developer = `Thomas Matlock`;
-	const dev = `development ${developer}`;
+	const dev = ` ${developer}`;
 	const divider = '|';
 	const Child = () => {
 		return (
@@ -25,7 +25,9 @@ export default function Credits() {
 					className={styles.credit_text_me}
 					style={{ cursor: 'pointer' }}
 				>
-					{dev}
+					<p className={styles.credit_my_prefix}>DEVELOPMENT</p>
+					<p className={styles.credit_my_name}>{dev}</p>
+					{/* {dev} */}
 				</Link>
 			</div>
 		);
