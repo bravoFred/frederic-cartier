@@ -64,7 +64,7 @@ export default function App() {
 					}}
 				></div>
 				<Swiper
-					slidesPerView={2}
+					slidesPerView={1.75}
 					mousewheel={true}
 					spaceBetween={16}
 					grabCursor={true}
