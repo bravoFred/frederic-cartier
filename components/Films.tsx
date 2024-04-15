@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-coverflow';
 import styles from './Films.module.scss';
 // import required modules
 import { useContext } from 'react';
@@ -18,6 +17,7 @@ import InputContextProvider from '@/store/inputContext';
 import DataContextProvider from '@/store/dataContext';
 import UserContextProvider from '@/store/userContext';
 import FilmsVideoPlayer from './FilmsPlayer';
+import 'swiper/css/effect-coverflow';
 
 export default function App() {
 	const { films, showFilm1, toggleFilm1, showFilm2, showFilm3, showFilm4, showFilm5, showFilm6 } =
