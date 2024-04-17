@@ -65,20 +65,16 @@ export default function App() {
 				></div>
 				<Swiper
 					slidesPerView={1.5}
-					mousewheel={true}
 					spaceBetween={48}
+					mousewheel={true}
 					grabCursor={true}
 					centeredSlides={true}
+					slideToClickedSlide={true}
 					direction={'vertical'}
-					speed={500}
-					// loop={true}
-					// pagination={{
-					// 	clickable: true,
-					// }}
+					speed={1000}
 					modules={[Mousewheel]}
 					className={films ? styles.swiper : styles.swiper_hidden}
 					// effect={'coverflow'}
-					slideToClickedSlide={true}
 					id={'swiper'}
 					onClick={(swiper) => clickHandler(swiper)}
 					onDoubleClick={(swiper) => doubleClickHandler(swiper)}

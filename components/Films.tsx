@@ -29,23 +29,22 @@ export default function App() {
 		const swiperRef = useRef(null!);
 		// console.log(swiperRef.current);
 		const clickHandler = (swiper) => {
-			swiperRef.current.swiper.slideTo(swiper.activeIndex);
-			console.log(swiperRef.current.swiper.activeIndex);
-			console.log('click');
-
+			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
+			// console.log(swiperRef.current.swiper.activeIndex);
+			// console.log('click');
 			// console.log(swiper.current);
 		};
 		const doubleClickHandler = (swiper) => {
-			swiperRef.current.swiper.slideTo(swiper.activeIndex);
-			console.log(swiperRef.current.swiper.activeIndex);
+			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
+			// console.log(swiperRef.current.swiper.activeIndex);
 			toggleFilm1();
-			console.log('double');
+			// console.log('double');
 		};
 		const swipeHandler = (swiper) => {
-			swiperRef.current.swiper.slideTo(swiper.activeIndex);
-			console.log(swiperRef.current.swiper.realIndex);
-			realIndex.current = swiperRef.current.swiper.realIndex;
-			console.log('swipe');
+			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
+			// console.log(swiperRef.current.swiper.realIndex);
+			// realIndex.current = swiperRef.current.swiper.realIndex;
+			// console.log('swipe');
 		};
 
 		return (
@@ -66,21 +65,18 @@ export default function App() {
 				></div>
 				<Swiper
 					ref={swiperRef}
-					slidesPerView={3}
+					slidesPerView={mobile ? 1.5 : 3}
+					spaceBetween={mobile ? 48 : 32}
 					mousewheel={true}
-					spaceBetween={32}
-					// loop={true}
-					speed={500}
-					// autoplay={{
-					// 	delay: 2500,
-					// 	disableOnInteraction: true,
-					// }}
+					grabCursor={true}
+					centeredSlides={true}
+					slideToClickedSlide={true}
+					direction={mobile ? 'vertical' : 'horizontal'}
+					speed={1000}
 					modules={[Mousewheel, EffectCoverflow]}
 					// modules={[Mousewheel, Autoplay, Pagination]}
 					className={films ? styles.swiper : styles.swiper_hidden}
 					effect={'coverflow'}
-					grabCursor={true}
-					centeredSlides={true}
 					coverflowEffect={{
 						rotate: 0,
 						stretch: 0,
@@ -89,7 +85,6 @@ export default function App() {
 						slideShadows: false,
 					}}
 					id={'swiper'}
-					slideToClickedSlide={true}
 					onClick={(swiper) => clickHandler(swiper)}
 					onDoubleClick={(swiper) => doubleClickHandler(swiper)}
 					onDoubleTap={(swiper) => doubleClickHandler(swiper)}
@@ -144,77 +139,5 @@ export default function App() {
 			</>
 		);
 	};
-	const DesktopFlat = () => {
-		return (
-			<Swiper
-				slidesPerView={3.5}
-				mousewheel={true}
-				spaceBetween={32}
-				grabCursor={false}
-				centeredSlides={true}
-				speed={250}
-				// direction={mobile ? 'vertical' : 'horizontal'}
-				// loop={true}
-				// pagination={{
-				// 	clickable: true,
-				// }}
-				autoplay={{
-					delay: 2500,
-					disableOnInteraction: true,
-				}}
-				modules={[Mousewheel, Autoplay]}
-				className={films ? styles.swiper : styles.swiper_hidden}
-				// effect={'coverflow'}
-				// coverflowEffect={{
-				// 	rotate: 10,
-				// 	stretch: 0,
-				// 	depth: 100,
-				// 	modifier: 1,
-				// 	slideShadows: true,
-				// }}
-			>
-				<SwiperSlide
-					className={styles.films_list_item}
-					// onClick={() => clickHandler(filmsData[0].id)}
-					key={filmsData[0].id}
-				>
-					{filmsData[0].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					// onClick={() => clickHandler(filmsData[1].id)}
-					key={filmsData[1].id}
-				>
-					{filmsData[1].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					// onClick={() => clickHandler(filmsData[2].id)}
-					key={filmsData[2].id}
-				>
-					{filmsData[2].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					// onClick={() => clickHandler(filmsData[3].id)}
-					key={filmsData[3].id}
-				>
-					{filmsData[3].title}
-				</SwiperSlide>
-				<SwiperSlide
-					className={styles.films_list_item}
-					// onClick={() => clickHandler(filmsData[4].id)}
-					key={filmsData[4].id}
-				>
-					{filmsData[4].title}
-				</SwiperSlide>
-			</Swiper>
-		);
-	};
-	return (
-		<>
-			{!mobile && <Desktop3D />}
-			{/* {!mobile && <DesktopFlat />} */}
-		</>
-	);
+	return <>{<Desktop3D />}</>;
 }

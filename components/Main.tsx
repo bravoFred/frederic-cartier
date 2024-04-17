@@ -18,7 +18,7 @@ export default function Main() {
 			<Modal>
 				<About />
 				<Films />
-				<FilmsMobile />
+				{/* <FilmsMobile /> */}
 			</Modal>
 			<Credits />
 		</>
