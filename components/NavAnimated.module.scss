@@ -51,6 +51,16 @@ $speed: 0.25s;
 	margin: 0 auto;
 	width: 10rem;
 }
+.nav_overlay {
+	height: 1rem;
+	width: 100%;
+	position: absolute;
+	top: 3rem;
+	z-index: 1000;
+	// border: 1px solid #fff;
+	background-color: black;
+	pointer-events: none;
+}
 .nav_item_text,
 .nav_item_text_fadeIn,
 .nav_item_text_fadeOut {
