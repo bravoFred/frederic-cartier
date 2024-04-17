@@ -20,6 +20,7 @@ $speed: 0.25s;
 	height: 4rem;
 	cursor: default;
 	transition: all 1s ease-in-out;
+	animation: delayFadeIn 2s ease-in-out;
 }
 
 .nav_item {
@@ -36,11 +37,8 @@ $speed: 0.25s;
 	white-space: nowrap;
 	// border: 1px solid red;
 	width: 3rem;
+	// animation: delayFadeIn 2s ease-in-out;
 }
-// .nav_item:nth-child(1) {
-// 	position: absolute;
-// 	left: 1.6rem;
-// }
 .nav_item:nth-child(3) {
 	width: 3.5rem;
 }
@@ -50,6 +48,7 @@ $speed: 0.25s;
 	right: 0;
 	margin: 0 auto;
 	width: 10rem;
+	animation: delayFadeIn 2s ease-in-out;
 }
 .nav_overlay {
 	height: 1rem;
