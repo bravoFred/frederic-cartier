@@ -23,18 +23,10 @@ export default function Nav() {
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.nav_item} onClick={goToFilms}>
-				<p
-					className={
-						about ? styles.nav_item_text_fadeOutLeft : styles.nav_item_text_fadeInLeft
-					}
-				>
+				<p className={about ? styles.nav_item_text_fadeOut : styles.nav_item_text_fadeIn}>
 					FILMS
 				</p>
-				<p
-					className={
-						about ? styles.nav_item_text_fadeInRight : styles.nav_item_text_fadeOutRight
-					}
-				>
+				<p className={about ? styles.nav_item_text_fadeIn : styles.nav_item_text_fadeOut}>
 					ABOUT
 				</p>
 			</div>
@@ -44,18 +36,14 @@ export default function Nav() {
 			<div className={styles.nav_item} onClick={goToAbout}>
 				<p
 					className={
-						about || films
-							? styles.nav_item_text_fadeOutLeft
-							: styles.nav_item_text_fadeInLeft
+						about || films ? styles.nav_item_text_fadeOut : styles.nav_item_text_fadeIn
 					}
 				>
 					ABOUT
 				</p>
 				<p
 					className={
-						about || films
-							? styles.nav_item_text_fadeInRight
-							: styles.nav_item_text_fadeOutRight
+						about || films ? styles.nav_item_text_fadeIn : styles.nav_item_text_fadeOut
 					}
 				>
 					CLOSE
