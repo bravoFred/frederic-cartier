@@ -66,7 +66,7 @@ export default function App() {
 				<Swiper
 					ref={swiperRef}
 					slidesPerView={mobile ? 1.5 : 3}
-					spaceBetween={mobile ? 40 : 32}
+					spaceBetween={mobile ? 48 : 32}
 					mousewheel={true}
 					grabCursor={true}
 					centeredSlides={true}
@@ -139,5 +139,9 @@ export default function App() {
 			</>
 		);
 	};
-	return <>{<Desktop3D />}</>;
+	return (
+		<>
+			<Desktop3D />
+		</>
+	);
 }
