@@ -12,8 +12,8 @@ export default function Main() {
 	const { dev, mobile } = useContext(UserContext);
 	return (
 		<>
-			<Nav />
-			{/* <NavAnimated /> */}
+			{/* <Nav /> */}
+			<NavAnimated />
 			<Content />
 			<Modal>
 				<About />

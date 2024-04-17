@@ -19,7 +19,7 @@
 }
 .swiper_hidden * {
 	z-index: 10;
-	transition: all 0.25s ease-in-out;
+	transition: all 1s ease-in-out;
 	opacity: 0;
 	z-index: -1;
 	// transform: scale(0);
@@ -92,7 +92,7 @@
 	height: 100%;
 	width: 100%;
 	// flex: 1;
-	transition: all 0.25s ease-in-out;
+	transition: all 1s ease-in-out;
 	// background-color: white;
 	margin: 0;
 	color: black;
@@ -110,7 +110,6 @@
 	object-fit: cover;
 	border-radius: 4px;
 	// overflow: hidden;
-	// transition: all 0s !important;
 }
 .films_list_item_title,
 .films_list_item_team_title,

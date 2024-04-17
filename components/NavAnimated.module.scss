@@ -5,7 +5,7 @@ $speed: 0.25s;
 	-webkit-tap-highlight-color: transparent;
 	user-select: none;
 	color: #fff;
-	transition: all 0.25s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 .nav {
 	position: fixed;
@@ -19,8 +19,7 @@ $speed: 0.25s;
 	z-index: 1;
 	height: 4rem;
 	cursor: default;
-	// transition: all 1s ease-in-out;
-	transition: all 0.25s ease-in-out;
+	transition: all 1s ease-in-out;
 
 	// border: 1px solid red;
 	// animation: fadeInTop 1s ease-in-out;
@@ -29,7 +28,6 @@ $speed: 0.25s;
 .nav_item {
 	// position: absolute;
 	// top: 50%;
-	// transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
 	font-size: 1.25rem;
 	// font-weight: 100;
 	cursor: pointer;
@@ -65,10 +63,10 @@ $speed: 0.25s;
 .nav_item_text_fadeOutLeft,
 .nav_item_text_fadeInRight,
 .nav_item_text_fadeOutRight {
-	// transition: all $speed ease-in-out;
 	cursor: pointer;
 	height: 100%;
 	display: flex;
+	position: absolute;
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;
@@ -77,13 +75,13 @@ $speed: 0.25s;
 .nav_item_text_fadeOutLeft,
 .nav_item_text_fadeOutRight {
 	opacity: 0;
-	font-size: 0px;
+	// font-size: 0px;
 }
 .nav_item_text_fadeOutLeft {
-	transform: translateX(-100%);
+	transform: translateX(-0%) scale(1);
 }
 .nav_item_text_fadeOutRight {
-	transform: translateX(100%);
+	transform: translateX(0%) scale(1);
 }
 .nav_item_text_fadeInLeft,
 .nav_item_text_fadeInRight {

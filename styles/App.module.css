@@ -23,7 +23,7 @@ body {
 		Helvetica Neue,
 		sans-serif;
 	font-weight: 700;
-	transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: all 1s ease-in-out;
 	color: white;
 }
 .main {

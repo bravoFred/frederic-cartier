@@ -5,7 +5,7 @@ $speed: 0.25s;
 	-webkit-tap-highlight-color: transparent;
 	user-select: none;
 	color: #fff;
-	transition: all 0.25s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 .nav {
 	position: fixed;
@@ -19,8 +19,7 @@ $speed: 0.25s;
 	z-index: 1;
 	height: 4rem;
 	cursor: default;
-	// transition: all 1s ease-in-out;
-	transition: all 0.25s ease-in-out;
+	transition: all 1s ease-in-out;
 	z-index: 1000;
 
 	// border: 1px solid red;
@@ -30,7 +29,6 @@ $speed: 0.25s;
 .nav_item {
 	// position: absolute;
 	// top: 50%;
-	// transition: all $speed cubic-bezier(0.075, 0.82, 0.165, 1);
 	font-size: 1.25rem;
 	// font-weight: 100;
 	cursor: pointer;
@@ -66,7 +64,6 @@ $speed: 0.25s;
 .nav_item_text_fadeOutLeft,
 .nav_item_text_fadeInRight,
 .nav_item_text_fadeOutRight {
-	// transition: all $speed ease-in-out;
 	cursor: pointer;
 	height: 100%;
 	display: flex;
