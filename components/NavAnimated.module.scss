@@ -61,6 +61,28 @@ $speed: 0.25s;
 	background-color: black;
 	pointer-events: none;
 }
+@keyframes delayFadeIn {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.nav_item_text {
+	animation: delayFadeIn 1s ease-in-out;
+}
 .nav_item_text,
 .nav_item_text_fadeIn,
 .nav_item_text_fadeOut {
@@ -75,8 +97,10 @@ $speed: 0.25s;
 }
 .nav_item_text_fadeOut {
 	opacity: 0;
+	animation: fadeOut 1s ease-in-out;
 }
 .nav_item_text_fadeIn {
+	animation: delayFadeIn 2s ease-in-out;
 	opacity: 1;
 }
 

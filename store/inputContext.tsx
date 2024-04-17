@@ -27,7 +27,7 @@ export function InputContextProvider(props) {
 	const router = useRouter();
 	const [dev, setDev] = useState(process.env.NODE_ENV === 'development');
 
-	const [testFilms, setTestFilms] = useState(dev ? true : false);
+	const [testFilms, setTestFilms] = useState(false);
 	const [testAbout, setTestAbout] = useState(false);
 	const [films, setFilms] = useState(testFilms);
 	const [about, setAbout] = useState(testAbout);
