@@ -44,16 +44,19 @@ export default function Nav() {
 			setRightNavText('');
 	}, [about, films, showFilm1, showFilm2, showFilm3, showFilm4, showFilm5, showFilm6]);
 	return (
-		<nav className={styles.nav}>
-			<div className={styles.nav_item} onClick={goToFilms}>
-				<p>{leftNavText}</p>
-			</div>
-			<div className={styles.nav_item} onClick={goToHome}>
-				<p className={styles.nav_item_text}>FREDERIC CARTIER</p>
-			</div>
-			<div className={styles.nav_item} onClick={goToAbout}>
-				<p>{rightNavText}</p>
-			</div>
-		</nav>
+		<>
+			<div className={styles.nav_overlay}></div>
+			<nav className={styles.nav}>
+				<div className={styles.nav_item} onClick={goToFilms}>
+					<p>{leftNavText}</p>
+				</div>
+				<div className={styles.nav_item} onClick={goToHome}>
+					<p className={styles.nav_item_text}>FREDERIC CARTIER</p>
+				</div>
+				<div className={styles.nav_item} onClick={goToAbout}>
+					<p>{rightNavText}</p>
+				</div>
+			</nav>
+		</>
 	);
 }

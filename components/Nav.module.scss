@@ -8,7 +8,7 @@ $speed: 0.25s;
 	transition: all 1s ease-in-out;
 }
 .nav {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	display: flex;
 	width: 100%;
@@ -17,13 +17,21 @@ $speed: 0.25s;
 	padding: 0;
 	margin: 0;
 	z-index: 1;
+	// flex-direction: column;
 	height: 4rem;
 	cursor: default;
 	transition: all 1s ease-in-out;
 	z-index: 1000;
-
-	// border: 1px solid red;
-	// animation: fadeInTop 1s ease-in-out;
+}
+.nav_overlay {
+	height: 1rem;
+	width: 100%;
+	position: absolute;
+	top: 3rem;
+	z-index: 1000;
+	// border: 1px solid #fff;
+	background-color: black;
+	pointer-events: none;
 }
 
 .nav_item {
@@ -31,6 +39,7 @@ $speed: 0.25s;
 	// top: 50%;
 	font-size: 1.25rem;
 	// font-weight: 100;
+	position: relative;
 	cursor: pointer;
 	// border: 1px solid red;
 	height: 100%;
