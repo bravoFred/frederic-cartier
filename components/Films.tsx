@@ -66,7 +66,7 @@ export default function App() {
 				<Swiper
 					ref={swiperRef}
 					slidesPerView={mobile ? 1.5 : 3}
-					spaceBetween={mobile ? 32 : 32}
+					spaceBetween={mobile ? 40 : 32}
 					mousewheel={true}
 					grabCursor={true}
 					centeredSlides={true}
