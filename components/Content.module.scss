@@ -4,14 +4,12 @@
 	top: 4rem;
 	width: 100%;
 	height: calc(100% - 8rem);
-	// border: 1px solid red;
-	// width: calc(100vw - 8rem);
 	width: 100%;
+	z-index: 1;
 }
 
 .content * {
 	animation: fadeIn 1s ease-in-out;
-	// filter: blur(2rem);
 }
 .content_hero {
 	position: absolute;
