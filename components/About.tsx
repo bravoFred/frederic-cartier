@@ -26,7 +26,6 @@ export default function About() {
 							<p>
 								{link.title}: {link.urlLabel}
 							</p>
-							{/* <p>{link.title}</p> */}
 						</Link>
 					</li>
 				))}
