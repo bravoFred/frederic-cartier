@@ -9,7 +9,6 @@ import Films from './Films';
 import FilmsMobile from './FilmsMobile';
 import UserContext from '@/store/userContext';
 export default function Main() {
-	const { dev, mobile } = useContext(UserContext);
 	return (
 		<>
 			{/* <Nav /> */}
@@ -18,7 +17,6 @@ export default function Main() {
 			<Modal>
 				<About />
 				<Films />
-				{/* <FilmsMobile /> */}
 			</Modal>
 			<Credits />
 		</>

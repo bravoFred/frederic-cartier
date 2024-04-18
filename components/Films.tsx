@@ -29,6 +29,7 @@ export default function App() {
 		const swiperRef = useRef(null!);
 		// console.log(swiperRef.current);
 		const clickHandler = (swiper) => {
+			if (mobile) toggleFilm1();
 			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			// console.log(swiperRef.current.swiper.activeIndex);
 			// console.log('click');
@@ -37,7 +38,7 @@ export default function App() {
 		const doubleClickHandler = (swiper) => {
 			// swiperRef.current.swiper.slideTo(swiper.activeIndex);
 			// console.log(swiperRef.current.swiper.activeIndex);
-			toggleFilm1();
+			if (!mobile) toggleFilm1();
 			// console.log('double');
 		};
 		const swipeHandler = (swiper) => {
