@@ -59,6 +59,7 @@ export function InputContextProvider(props) {
 		setFilms(!films);
 	}
 	function goToHome() {
+		router.push('/');
 		disableShowFilms();
 		setAbout(false);
 		setFilms(false);
