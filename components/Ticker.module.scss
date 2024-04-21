@@ -22,6 +22,7 @@ $baseDelay: 2000ms;
 	height: 4rem;
 	user-select: none;
 	transition: all 0.25s ease-in-out;
+	animation: delayFadeIn 2s ease-in-out;
 }
 .credits * {
 	transition: all 0.25s ease-in-out;
@@ -50,23 +51,7 @@ $baseDelay: 2000ms;
 	width: auto;
 	opacity: 1;
 	z-index: 1;
-	// animation: marquee $marqueeSpeed linear infinite;
 	white-space: nowrap;
-}
-.credit:nth-of-type(1) {
-	// left: 0;
-}
-.credit:nth-of-type(2) {
-	// animation-delay: $baseDelay * $multiplier;
-}
-.credit:nth-of-type(3) {
-	// animation-delay: $baseDelay * 2 * $multiplier;
-}
-.credit:nth-of-type(4) {
-	// animation-delay: $baseDelay * 3 * $multiplier;
-}
-.credit:nth-of-type(5) {
-	// animation-delay: $baseDelay * 4 * $multiplier;
 }
 .credit_text,
 .credit_text_me,
@@ -92,6 +77,7 @@ $baseDelay: 2000ms;
 	z-index: 2;
 	user-select: none;
 	pointer-events: none;
+
 	background-image: linear-gradient(
 		to right,
 		rgba(0, 0, 0, 1) 2%,
@@ -105,7 +91,6 @@ $baseDelay: 2000ms;
 	opacity: 0.75;
 }
 .credit_text_me {
-	// opacity: 1;
 	display: flex;
 	flex-direction: row;
 	font-size: 8px;
@@ -113,16 +98,13 @@ $baseDelay: 2000ms;
 	color: #fff;
 	padding: 0;
 	margin: 0 0.5rem;
-	// margin: 0 0.5rem;
 	font-weight: 300 !important;
 	letter-spacing: 0.75px;
 	text-transform: uppercase;
 	line-height: 1rem;
 	&:hover * {
 		opacity: 1;
-		// color: red;
 	}
-	// opacity: 0.75;
 }
 .credit_text_bold {
 	font-weight: 900 !important;
@@ -139,7 +121,6 @@ $baseDelay: 2000ms;
 	color: #fff;
 	padding: 0;
 	margin: 0 0.5rem;
-	// margin: 0 0.5rem;
 	font-weight: 300 !important;
 	letter-spacing: 0.75px;
 	text-transform: uppercase;
