@@ -53,10 +53,18 @@ export default function App() {
 
 			function handleMouseMove(e) {
 				const instruction = document.getElementById(styles.instruction);
-				instruction.style.left = e.clientX + 'px';
-				instruction.style.top = e.clientY + 'px';
 				// get xy of element and set to xy of instruction
-				console.log(e.clientX, e.clientY);
+				const contentWidth = document.getElementById(
+					styles.instruction_container
+				).offsetWidth;
+				const contentHeight = document.getElementById(
+					styles.instruction_container
+				).offsetHeight;
+				instruction.style.left = e.pageX - contentWidth + 'px';
+				instruction.style.top = e.pageY - contentHeight + 'px';
+				const contentX = document.getElementById(styles.instruction_container).offsetLeft;
+				const contentY = document.getElementById(styles.instruction_container).offsetTop;
+				console.log(contentWidth);
 			}
 			document.addEventListener('mousemove', handleMouseMove);
 			// cleanup
