@@ -4,9 +4,9 @@ import React from 'react';
 import MuxPlayer from '@mux/mux-player-react';
 type props = {
 	show: boolean;
-	title: string;
-	description: string;
-	team: { name: string; role: string }[];
+	title?: string;
+	description?: string;
+	team?: { name: string; role: string }[];
 };
 export default function MainVideo({ show, title, description, team }: props) {
 	return (
@@ -26,7 +26,7 @@ export default function MainVideo({ show, title, description, team }: props) {
 					</div>
 					<div className={styles.video_details_panel}>
 						<p className={styles.films_list_item_title}>TEAM</p>
-						{team.map((member) => {
+						{team?.map((member) => {
 							return (
 								<div className={styles.team_member} key={member.name}>
 									<p className={styles.films_list_item_team_name}>
