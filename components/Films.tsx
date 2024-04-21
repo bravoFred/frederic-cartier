@@ -53,18 +53,32 @@ export default function App() {
 
 			function handleMouseMove(e) {
 				const instruction = document.getElementById(styles.instruction);
-				// get xy of element and set to xy of instruction
+				const instruction2 = document.getElementById(styles.instruction2);
+				const instruction3 = document.getElementById(styles.instruction3);
 				const contentWidth = document.getElementById(
 					styles.instruction_container
 				).offsetWidth;
 				const contentHeight = document.getElementById(
 					styles.instruction_container
 				).offsetHeight;
-				instruction.style.left = e.pageX - contentWidth + 'px';
-				instruction.style.top = e.pageY - contentHeight + 'px';
-				const contentX = document.getElementById(styles.instruction_container).offsetLeft;
-				const contentY = document.getElementById(styles.instruction_container).offsetTop;
-				console.log(contentWidth);
+				const contentWidth2 = document.getElementById(
+					styles.instruction_container2
+				).offsetWidth;
+				const contentHeight2 = document.getElementById(
+					styles.instruction_container2
+				).offsetHeight;
+				const contentWidth3 = document.getElementById(
+					styles.instruction_container3
+				).offsetWidth;
+				const contentHeight3 = document.getElementById(
+					styles.instruction_container3
+				).offsetHeight;
+				instruction.style.left = e.pageX - contentWidth + 0 + 'px';
+				instruction.style.top = e.pageY - contentHeight + 0 + 'px';
+				instruction2.style.left = e.pageX - contentWidth2 + 0 + 'px';
+				instruction2.style.top = e.pageY - contentHeight2 + 0 + 'px';
+				instruction3.style.left = e.pageX - contentWidth3 + 0 + 'px';
+				instruction3.style.top = e.pageY - contentHeight3 + 0 + 'px';
 			}
 			document.addEventListener('mousemove', handleMouseMove);
 			// cleanup
@@ -124,7 +138,7 @@ export default function App() {
 							className={styles.films_list_item_image}
 						/>
 						<div id={styles.instruction_container}>
-							<div id={styles.instruction}>double click to open</div>
+							<div id={styles.instruction}>double click to watch</div>
 						</div>
 						<p className={styles.films_list_item_title}>{filmsData[0].title}</p>
 						<p className={styles.films_list_item_description}>
@@ -139,6 +153,9 @@ export default function App() {
 							height={450}
 							className={styles.films_list_item_image}
 						/>
+						<div id={styles.instruction_container2}>
+							<div id={styles.instruction2}>double click to watch</div>
+						</div>
 						<p className={styles.films_list_item_title}>{filmsData[1].title}</p>
 						<p className={styles.films_list_item_description}>
 							{filmsData[1].description}
@@ -152,6 +169,9 @@ export default function App() {
 							height={450}
 							className={styles.films_list_item_image}
 						/>
+						<div id={styles.instruction_container3}>
+							<div id={styles.instruction3}>double click to watch</div>
+						</div>
 						<p className={styles.films_list_item_title}>{filmsData[2].title}</p>
 						<p className={styles.films_list_item_description}>
 							{filmsData[2].description}
