@@ -94,7 +94,7 @@ $multiplier: 0.5;
 .films_list_item_description {
 	margin-top: 1rem;
 	font-size: 10px;
-	font-weight: 300;
+	font-weight: 300 !important;
 }
 .team_member {
 	display: flex;
