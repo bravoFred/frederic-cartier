@@ -103,7 +103,7 @@ export default function App() {
 					}}
 				></div>
 				<Swiper
-					ref={swiperRef}
+					// ref={swiperRef}
 					slidesPerView={mobile ? 1.5 : 3}
 					spaceBetween={mobile ? 48 : 32}
 					mousewheel={true}
@@ -187,9 +187,5 @@ export default function App() {
 			</>
 		);
 	};
-	return (
-		<>
-			<Desktop3D />
-		</>
-	);
+	return <Desktop3D />;
 }
