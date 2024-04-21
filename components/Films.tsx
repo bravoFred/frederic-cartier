@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
@@ -48,6 +48,22 @@ export default function App() {
 			// console.log('swipe');
 		};
 
+		useEffect(() => {
+			// add mouse move event listener
+
+			function handleMouseMove(e) {
+				const instruction = document.getElementById(styles.instruction);
+				instruction.style.left = e.clientX + 'px';
+				instruction.style.top = e.clientY + 'px';
+				// get xy of element and set to xy of instruction
+				console.log(e.clientX, e.clientY);
+			}
+			document.addEventListener('mousemove', handleMouseMove);
+			// cleanup
+			return () => {
+				document.removeEventListener('mousemove', handleMouseMove);
+			};
+		}, []);
 		return (
 			<>
 				<div
@@ -99,6 +115,9 @@ export default function App() {
 							height={450}
 							className={styles.films_list_item_image}
 						/>
+						<div id={styles.instruction_container}>
+							<div id={styles.instruction}>double click to open</div>
+						</div>
 						<p className={styles.films_list_item_title}>{filmsData[0].title}</p>
 						<p className={styles.films_list_item_description}>
 							{filmsData[0].description}
