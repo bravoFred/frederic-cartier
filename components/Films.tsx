@@ -84,7 +84,7 @@ export default function App() {
 				centeredSlides={true}
 				slideToClickedSlide={true}
 				direction={mobile ? 'vertical' : 'horizontal'}
-				speed={mobile ? 500 : 1000}
+				speed={mobile ? 250 : 500}
 				modules={[Mousewheel, EffectCoverflow]}
 				// modules={[Mousewheel, Autoplay, Pagination]}
 				className={films ? styles.swiper : styles.swiper_hidden}

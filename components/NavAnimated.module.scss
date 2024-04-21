@@ -85,11 +85,12 @@
 }
 .nav_item_text_fadeOut {
 	opacity: 0;
-	animation: fadeOut 0.5s ease-in-out;
+	transition: all 1s ease-in-out;
+	// animation: fadeOut 0.5s ease-in-out;
 }
 .nav_item_text_fadeIn {
-	animation: delayFadeIn 2s ease-in-out;
 	opacity: 1;
+	animation: delayFadeIn 2s ease-in-out;
 }
 
 @media (min-width: 768px) {
