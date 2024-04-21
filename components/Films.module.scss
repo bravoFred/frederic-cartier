@@ -26,6 +26,44 @@
 	pointer-events: none;
 	// font-size: 0px;
 }
+#instruction_container,
+#instruction_container2,
+#instruction_container3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	border-radius: 4px;
+	overflow: hidden;
+	user-select: none;
+}
+#instruction_container:hover #instruction {
+	opacity: 1;
+}
+#instruction_container2:hover #instruction2 {
+	opacity: 1;
+}
+#instruction_container3:hover #instruction3 {
+	opacity: 1;
+}
+#instruction,
+#instruction2,
+#instruction3 {
+	// border: 1px solid red;
+	//  display:none;
+	opacity: 0;
+	position: absolute;
+	transform: translateX(-120%) translateY(100%);
+	cursor: none;
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+	transition: all 0s ease-in-out !important;
+	// border: 1px solid red;
+	width: 4.5rem;
+	text-align: center;
+}
 .swiper_overlay {
 	position: absolute;
 	top: 0;
@@ -47,6 +85,11 @@
 	pointer-events: none;
 }
 @media (max-width: 768px) {
+	#instruction,
+	#instruction2,
+	#instruction3 {
+		display: none;
+	}
 	.swiper {
 		height: 100%;
 	}
@@ -106,7 +149,8 @@
 .films_list_item_image {
 	width: 100%;
 	height: auto;
-	max-height: 33vh;
+	// max-height: 33vh;
+	height: 60%;
 	object-fit: cover;
 	border-radius: 4px;
 	// transition: all 0s ease-in-out !important;
