@@ -35,10 +35,19 @@ export default function Nav() {
 					</p>
 					<p
 						className={
-							about ? styles.nav_item_text_fadeIn : styles.nav_item_text_fadeOut
+							about && !showFilm1
+								? styles.nav_item_text_fadeIn
+								: styles.nav_item_text_fadeOut
 						}
 					>
 						ABOUT
+					</p>
+					<p
+						className={
+							showFilm1 ? styles.nav_item_text_fadeIn : styles.nav_item_text_fadeOut
+						}
+					>
+						BACK
 					</p>
 				</div>
 				<div className={styles.nav_item} onClick={goToHome}>
@@ -56,7 +65,7 @@ export default function Nav() {
 					</p>
 					<p
 						className={
-							about || films
+							(about || films) && !showFilm1
 								? styles.nav_item_text_fadeIn
 								: styles.nav_item_text_fadeOut
 						}
