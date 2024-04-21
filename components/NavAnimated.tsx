@@ -28,7 +28,9 @@ export default function Nav() {
 				<div className={styles.nav_item} onClick={goToFilms}>
 					<p
 						className={
-							about ? styles.nav_item_text_fadeOut : styles.nav_item_text_fadeIn
+							about || showFilm1
+								? styles.nav_item_text_fadeOut
+								: styles.nav_item_text_fadeIn
 						}
 					>
 						FILMS
