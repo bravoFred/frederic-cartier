@@ -18,7 +18,7 @@ body {
 }
 .app * {
 	-webkit-tap-highlight-color: transparent;
-
+	user-select: none;
 	font-family:
 		Helvetica Neue,
 		sans-serif;
