@@ -11,7 +11,6 @@ import UserContext from '@/store/userContext';
 export default function Main() {
 	return (
 		<>
-			{/* <Nav /> */}
 			<NavAnimated />
 			<Content />
 			<Modal>

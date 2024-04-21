@@ -20,7 +20,7 @@ $multiplier: 0.5;
 	z-index: 10;
 }
 .video_hidden {
-	z-index: -1;
+	z-index: 0;
 	opacity: 0;
 	pointer-events: none;
 }

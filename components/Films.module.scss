@@ -13,15 +13,22 @@
 	width: 100%;
 	// overflow: auto;
 	padding: 1rem;
+	animation: fadeIn 1s ease-in-out;
 }
 .swiper {
 	// z-index: 10;
 }
 .swiper_hidden * {
-	transition: all 1s ease-in-out;
+	// transition: all 1s ease-in-out;
+	// opacity: 0;
+	// // z-index: -1;
+	// pointer-events: none;
+	z-index: 0;
 	opacity: 0;
-	// z-index: -1;
 	pointer-events: none;
+}
+.swiper * {
+	animation: fadeIn 1s ease-in-out;
 }
 #instruction_container,
 #instruction_container2,
