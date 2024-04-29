@@ -1,9 +1,9 @@
 // import poster from '@/public/ig.png';
 import poster from '@/public/hero.webp';
 const poster1 =
-	'https://raw.githubusercontent.com/thomasmatlock/public-fred/main/images/posterFilm1.png';
+	'https://raw.githubusercontent.com/thomasmatlock/public-fred/main/images/posterFilm1.webp';
 const poster2 =
-	'https://raw.githubusercontent.com/thomasmatlock/public-fred/main/images/posterFilm2.png';
+	'https://raw.githubusercontent.com/thomasmatlock/public-fred/main/images/posterFilm2.webp';
 // import poster2 from '@/public/poster2.webp';
 // import poster3 from '@/public/poster3.webp';
 function convertTitleToId(title: string) {
