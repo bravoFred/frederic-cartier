@@ -64,6 +64,8 @@ export default function App() {
 			document.removeEventListener('mousemove', handleMouseMove);
 		};
 	}, []);
+	const poster1 =
+		'https://image.mux.com/7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA/thumbnail.png?width=1280&height=720&time=5';
 	return (
 		<>
 			<div
@@ -100,7 +102,8 @@ export default function App() {
 			>
 				<SwiperSlide className={styles.films_list_item} key={filmsData[0].id}>
 					<Image
-						src={filmsData[0].poster}
+						// src={filmsData[0].poster}
+						src={poster1}
 						alt={filmsData[0].title}
 						width={300}
 						height={450}
