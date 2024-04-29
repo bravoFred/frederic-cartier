@@ -18,6 +18,8 @@ import DataContextProvider from '@/store/dataContext';
 import UserContextProvider from '@/store/userContext';
 import FilmsPlayer from './FilmsPlayer';
 import 'swiper/css/effect-coverflow';
+const previewImg =
+	'https://raw.githubusercontent.com/thomasmatlock/public-fred/main/images/posterFilm1.png';
 
 export default function App() {
 	const { films, showFilm1, toggleFilm1, toggleFilm2, showFilm2, setShowFilm1, setShowFilm2 } =
@@ -102,7 +104,7 @@ export default function App() {
 				<SwiperSlide className={styles.films_list_item} key={filmsData[0].id}>
 					<Image
 						// src={filmsData[0].poster}
-						src={poster1}
+						src={previewImg}
 						alt={filmsData[0].title}
 						width={300}
 						height={450}
