@@ -1,8 +1,11 @@
 // import poster from '@/public/ig.png';
 import poster from '@/public/hero.webp';
-import poster0 from '@/public/poster1.jpeg';
-import poster2 from '@/public/poster2.webp';
-import poster3 from '@/public/poster3.webp';
+const poster1 =
+	'https://raw.githubusercontent.com/thomasmatlock/public-fred/main/images/posterFilm1.png';
+const poster2 =
+	'https://raw.githubusercontent.com/thomasmatlock/public-fred/main/images/posterFilm2.png';
+// import poster2 from '@/public/poster2.webp';
+// import poster3 from '@/public/poster3.webp';
 function convertTitleToId(title: string) {
 	return title.toLowerCase().replace(' ', '');
 }
@@ -14,7 +17,7 @@ const data = [
 		url: 'https://www.youtube.com/@tomtacular',
 		// playbackId: 'Mi5p7ncpuEh6BT6epoEd026jOxyOKmebgategcY54nb4',
 		playbackId: '7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA',
-		poster: poster0,
+		poster: poster1,
 		team: [
 			{
 				name: 'Frederic Cartier',

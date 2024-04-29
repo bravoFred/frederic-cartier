@@ -103,8 +103,8 @@ export default function App() {
 			>
 				<SwiperSlide className={styles.films_list_item} key={filmsData[0].id}>
 					<Image
-						// src={filmsData[0].poster}
-						src={previewImg}
+						src={filmsData[0].poster}
+						// src={previewImg}
 						alt={filmsData[0].title}
 						width={300}
 						height={450}
