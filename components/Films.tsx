@@ -20,8 +20,7 @@ import FilmsVideoPlayer from './FilmsPlayer';
 import 'swiper/css/effect-coverflow';
 
 export default function App() {
-	const { films, showFilm1, toggleFilm1, showFilm2, showFilm3, showFilm4, showFilm5, showFilm6 } =
-		useContext(InputContextProvider);
+	const { films, showFilm1, toggleFilm1, showFilm2 } = useContext(InputContextProvider);
 	const { mobile } = useContext(UserContextProvider);
 	const { filmsData } = useContext(DataContextProvider);
 	const clickHandler = (swiper) => {
@@ -35,7 +34,7 @@ export default function App() {
 		function handleMouseMove(e) {
 			const instruction = document.getElementById(styles.instruction);
 			const instruction2 = document.getElementById(styles.instruction2);
-			const instruction3 = document.getElementById(styles.instruction3);
+			// const instruction3 = document.getElementById(styles.instruction3);
 			const contentWidth = document.getElementById(styles.instruction_container).offsetWidth;
 			const contentHeight = document.getElementById(
 				styles.instruction_container
@@ -46,18 +45,18 @@ export default function App() {
 			const contentHeight2 = document.getElementById(
 				styles.instruction_container2
 			).offsetHeight;
-			const contentWidth3 = document.getElementById(
-				styles.instruction_container3
-			).offsetWidth;
-			const contentHeight3 = document.getElementById(
-				styles.instruction_container3
-			).offsetHeight;
+			// const contentWidth3 = document.getElementById(
+			// 	styles.instruction_container3
+			// ).offsetWidth;
+			// const contentHeight3 = document.getElementById(
+			// 	styles.instruction_container3
+			// ).offsetHeight;
 			instruction.style.left = e.pageX - contentWidth + 0 + 'px';
 			instruction.style.top = e.pageY - contentHeight + 0 + 'px';
 			instruction2.style.left = e.pageX - contentWidth2 + 0 + 'px';
 			instruction2.style.top = e.pageY - contentHeight2 + 0 + 'px';
-			instruction3.style.left = e.pageX - contentWidth3 + 0 + 'px';
-			instruction3.style.top = e.pageY - contentHeight3 + 0 + 'px';
+			// instruction3.style.left = e.pageX - contentWidth3 + 0 + 'px';
+			// instruction3.style.top = e.pageY - contentHeight3 + 0 + 'px';
 		}
 		document.addEventListener('mousemove', handleMouseMove);
 		// cleanup
@@ -70,10 +69,7 @@ export default function App() {
 			<div
 				className={styles.swiper_overlay}
 				style={{
-					opacity:
-						showFilm1 || showFilm2 || showFilm3 || showFilm4 || showFilm5 || showFilm6
-							? 0
-							: 1,
+					opacity: showFilm1 || showFilm2 ? 0 : 1,
 				}}
 			></div>
 			<Swiper
@@ -130,7 +126,7 @@ export default function App() {
 					<p className={styles.films_list_item_title}>{filmsData[1].title}</p>
 					<p className={styles.films_list_item_description}>{filmsData[1].description}</p>
 				</SwiperSlide>
-				<SwiperSlide className={styles.films_list_item} key={filmsData[2].id}>
+				{/* <SwiperSlide className={styles.films_list_item} key={filmsData[2].id}>
 					<Image
 						src={filmsData[2].poster}
 						alt={filmsData[2].title}
@@ -143,7 +139,7 @@ export default function App() {
 					</div>
 					<p className={styles.films_list_item_title}>{filmsData[2].title}</p>
 					<p className={styles.films_list_item_description}>{filmsData[2].description}</p>
-				</SwiperSlide>
+				</SwiperSlide> */}
 			</Swiper>
 			<FilmsVideoPlayer
 				show={showFilm1}
