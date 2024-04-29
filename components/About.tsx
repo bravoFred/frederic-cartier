@@ -5,33 +5,11 @@ import Link from 'next/link';
 import { useContext } from 'react';
 export default function About() {
 	const { aboutData } = useContext(DataContext);
-	const { contact } = aboutData;
 	const { about } = useContext(InputContextProvider);
+	const linkTitle = `Email`;
+	const email = `fcartier@srgestudios.com`;
+	const linkUrl = `mailto:fcartier@srgestudios.com`;
 
-	const ContactLinks = () => {
-		return (
-			<ul>
-				{contact.links.map((link) => (
-					<li
-						key={link.title}
-						style={{
-							cursor: 'pointer',
-							listStyleType: 'none',
-							display: 'flex',
-							flexDirection: 'row',
-							width: '100%',
-						}}
-					>
-						<Link href={link.url} target="_blank">
-							<p>
-								{link.title}: {link.urlLabel}
-							</p>
-						</Link>
-					</li>
-				))}
-			</ul>
-		);
-	};
 	return (
 		<div className={about ? styles.about : styles.about_hidden}>
 			<div className={styles.about_panel}>
@@ -42,8 +20,12 @@ export default function About() {
 			</div>
 			<div className={styles.about_panel}>
 				<div className={styles.about_panel_content}>
-					<h2>{contact.title}</h2>
-					<ContactLinks />
+					<h2>Contact</h2>
+					<Link href={linkUrl} target="_blank">
+						<p>
+							{linkTitle}: {email}
+						</p>
+					</Link>
 				</div>
 			</div>
 		</div>
