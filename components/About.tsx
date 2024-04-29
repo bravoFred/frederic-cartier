@@ -8,7 +8,7 @@ export default function About() {
 	const { about } = useContext(InputContextProvider);
 	const linkTitle = `Email`;
 	const email = `fcartier@srgestudios.com`;
-	const linkUrl = `mailto:fcartier@srgestudios.com`;
+	const linkUrl = `mailto:${email}`;
 
 	return (
 		<div className={about ? styles.about : styles.about_hidden}>
