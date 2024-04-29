@@ -23,11 +23,10 @@ const data = [
 		],
 	},
 	{
-		title: 'Film 2',
+		title: 'Coming Soon',
 		id: 'film2',
 		description: `Coming soon.`,
 		url: 'https://www.youtube.com/@tomtacular',
-		muxId: '123456',
 		playbackId: '7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA',
 		poster: poster2,
 		team: [

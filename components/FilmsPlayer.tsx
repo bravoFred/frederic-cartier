@@ -2,15 +2,17 @@ import styles from './FilmsPlayer.module.scss';
 // @ts-nocheck.
 import React from 'react';
 import MuxPlayer from '@mux/mux-player-react';
+// import poster1 from '@/public/posterFilm1.png';
+// const poster2 = 'https://pub-b939a725b21a4ff0aeb386a49caa581c.r2.dev/images%2Flab%2Fdesktop.png';
 type props = {
 	show: boolean;
 	title?: string;
 	description?: string;
 	team?: { name: string; role: string }[];
 };
-export default function MainVideo({ show, title, description, team }: props) {
+export default function FilmsPlayer({ show, title, description, team }: props) {
 	const poster1 =
-		'https://image.mux.com/7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA/thumbnail.png?width=3840&height=1634&time=5';
+		'https://image.mux.com/7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA/thumbnail.png?width=3840&height=2160&time=5';
 	const playbackID1 = `7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA`;
 	return (
 		<div className={show ? styles.video : styles.video_hidden}>
@@ -18,7 +20,7 @@ export default function MainVideo({ show, title, description, team }: props) {
 				<MuxPlayer
 					className={styles.video_player}
 					playbackId={playbackID1}
-					// thumbnailTime={80}
+					thumbnailTime={80}
 					poster={poster1}
 					accent-color="#1a1a1a"
 				/>
