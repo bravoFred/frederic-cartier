@@ -6,7 +6,6 @@ import InputContextProvider from '../store/inputContext';
 import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
-	useEffect(() => {}, []);
 	const {
 		about,
 		films,
@@ -15,20 +14,29 @@ export default function Nav() {
 		goToAbout,
 		showFilm1,
 		showFilm2,
-		showFilm3,
-		showFilm4,
-		showFilm5,
+		setShowFilm1,
+		setShowFilm2,
 	} = useContext(InputContextProvider);
+	useEffect(() => {}, [about, films, showFilm1, showFilm2, setShowFilm1, setShowFilm2]);
+	const leftHandler = () => {
+		goToFilms();
+	};
+	const centerHandler = () => {
+		goToHome();
+	};
+	const rightHandler = () => {
+		goToAbout();
+	};
 
 	return (
 		<>
 			<div className={styles.nav_overlay}></div>
 
 			<nav className={styles.nav}>
-				<div className={styles.nav_item} onClick={goToFilms}>
+				<div className={styles.nav_item} onClick={leftHandler}>
 					<p
 						className={
-							about || showFilm1
+							about || showFilm1 || showFilm2
 								? styles.nav_item_text_fadeOut
 								: styles.nav_item_text_fadeIn
 						}
@@ -46,16 +54,18 @@ export default function Nav() {
 					</p>
 					<p
 						className={
-							showFilm1 ? styles.nav_item_text_fadeIn : styles.nav_item_text_fadeOut
+							showFilm1 || showFilm2
+								? styles.nav_item_text_fadeIn
+								: styles.nav_item_text_fadeOut
 						}
 					>
 						BACK
 					</p>
 				</div>
-				<div className={styles.nav_item} onClick={goToHome}>
+				<div className={styles.nav_item} onClick={centerHandler}>
 					<p className={styles.nav_item_text}>FREDERIC CARTIER</p>
 				</div>
-				<div className={styles.nav_item} onClick={goToAbout}>
+				<div className={styles.nav_item} onClick={rightHandler}>
 					<p
 						className={
 							about || films
@@ -67,7 +77,7 @@ export default function Nav() {
 					</p>
 					<p
 						className={
-							(about || films) && !showFilm1
+							(about || films) && !showFilm1 && !showFilm2
 								? styles.nav_item_text_fadeIn
 								: styles.nav_item_text_fadeOut
 						}

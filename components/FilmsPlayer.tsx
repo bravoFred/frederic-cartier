@@ -1,9 +1,9 @@
 import styles from './FilmsPlayer.module.scss';
 // @ts-nocheck.
-import React from 'react';
+import React, { useState } from 'react';
 import MuxPlayer from '@mux/mux-player-react';
-// import poster1 from '@/public/posterFilm1.png';
-// const poster2 = 'https://pub-b939a725b21a4ff0aeb386a49caa581c.r2.dev/images%2Flab%2Fdesktop.png';
+import InputContext from '@/store/inputContext';
+import { useContext, useEffect } from 'react';
 type props = {
 	show: boolean;
 	poster: string;
@@ -13,21 +13,29 @@ type props = {
 	team: { name: string; role: string }[];
 };
 export default function FilmsPlayer({ show, title, description, team, playbackID, poster }: props) {
-	const poster1 =
-		'https://image.mux.com/7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA/thumbnail.png?width=3840&height=2160&time=5';
-	const playbackID1 = `7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA`;
+	const { showFilm1, showFilm2 } = useContext(InputContext);
+	const [showPlayer, setShowPlayer] = useState(false);
+	useEffect(() => {
+		if (showFilm1 || showFilm2) {
+			setShowPlayer(true);
+		} else {
+			setTimeout(() => {
+				setShowPlayer(false);
+			}, 1000);
+		}
+	}, [showFilm1, showFilm2]);
 	return (
 		<div className={show ? styles.video : styles.video_hidden}>
 			<div className={styles.player_wrapper}>
-				<MuxPlayer
-					className={styles.video_player}
-					// playbackId={playbackID1}
-					playbackId={playbackID}
-					thumbnailTime={80}
-					poster={poster}
-					// poster={poster1}
-					accent-color="#1a1a1a"
-				/>
+				{showPlayer && (
+					<MuxPlayer
+						className={styles.video_player}
+						playbackId={playbackID}
+						thumbnailTime={80}
+						poster={poster}
+						accent-color="#1a1a1a"
+					/>
+				)}
 				<div className={styles.video_details}>
 					<div className={styles.video_details_panel}>
 						<p className={styles.films_list_item_title}>{title}</p>
