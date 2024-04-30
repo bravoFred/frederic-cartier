@@ -5,7 +5,6 @@ import Content from './Content';
 import Modal from './Modal';
 import About from './About';
 import Films from './Films';
-import UserContext from '@/store/userContext';
 export default function Main() {
 	return (
 		<>
