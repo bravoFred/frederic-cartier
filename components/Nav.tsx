@@ -17,7 +17,6 @@ export default function Nav() {
 		setShowFilm1,
 		setShowFilm2,
 	} = useContext(InputContextProvider);
-	useEffect(() => {}, [about, films, showFilm1, showFilm2, setShowFilm1, setShowFilm2]);
 	const leftHandler = () => {
 		goToFilms();
 	};
@@ -30,8 +29,7 @@ export default function Nav() {
 
 	return (
 		<>
-			<div className={styles.nav_overlay}></div>
-
+			<div className={styles.nav_overlay} />
 			<nav className={styles.nav}>
 				<div className={styles.nav_item} onClick={leftHandler}>
 					<p
