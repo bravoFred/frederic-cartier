@@ -1,6 +1,5 @@
 import { useRef, useState, useContext } from 'react';
 import Nav from './Nav';
-import NavAnimated from './NavAnimated';
 import Credits from './Ticker';
 import Content from './Content';
 import Modal from './Modal';
@@ -11,7 +10,7 @@ import UserContext from '@/store/userContext';
 export default function Main() {
 	return (
 		<>
-			<NavAnimated />
+			<Nav />
 			<Content />
 			<Modal>
 				<About />

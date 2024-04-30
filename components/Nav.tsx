@@ -6,33 +6,74 @@ import InputContextProvider from '../store/inputContext';
 import { useFrame } from '@react-three/fiber';
 
 export default function Nav() {
-	const { about, films, goToHome, goToFilms, goToAbout, showFilm1, showFilm2 } =
-		useContext(InputContextProvider);
-	const [leftNavText, setLeftNavText] = useState('FILMS');
-	const [rightNavText, setRightNavText] = useState('ABOUT');
-	useEffect(() => {
-		if (about) setLeftNavText('ABOUT');
-		if (showFilm1 || showFilm2) setLeftNavText('BACK');
-		if (!about && !showFilm1 && !showFilm2) setLeftNavText('FILMS');
-	}, [about, showFilm1, showFilm2, films]);
-	useEffect(() => {
-		if (!about && !films) setRightNavText('ABOUT');
-		if (films) setRightNavText('CLOSE');
-		if (about) setRightNavText('CLOSE');
-		if (showFilm1 || showFilm2) setRightNavText('');
-	}, [about, films, showFilm1, showFilm2]);
+	useEffect(() => {}, []);
+	const {
+		about,
+		films,
+		goToHome,
+		goToFilms,
+		goToAbout,
+		showFilm1,
+		showFilm2,
+		showFilm3,
+		showFilm4,
+		showFilm5,
+	} = useContext(InputContextProvider);
+
 	return (
 		<>
 			<div className={styles.nav_overlay}></div>
+
 			<nav className={styles.nav}>
 				<div className={styles.nav_item} onClick={goToFilms}>
-					<p>{leftNavText}</p>
+					<p
+						className={
+							about || showFilm1
+								? styles.nav_item_text_fadeOut
+								: styles.nav_item_text_fadeIn
+						}
+					>
+						FILMS
+					</p>
+					<p
+						className={
+							about && !showFilm1
+								? styles.nav_item_text_fadeIn
+								: styles.nav_item_text_fadeOut
+						}
+					>
+						ABOUT
+					</p>
+					<p
+						className={
+							showFilm1 ? styles.nav_item_text_fadeIn : styles.nav_item_text_fadeOut
+						}
+					>
+						BACK
+					</p>
 				</div>
 				<div className={styles.nav_item} onClick={goToHome}>
 					<p className={styles.nav_item_text}>FREDERIC CARTIER</p>
 				</div>
 				<div className={styles.nav_item} onClick={goToAbout}>
-					<p>{rightNavText}</p>
+					<p
+						className={
+							about || films
+								? styles.nav_item_text_fadeOut
+								: styles.nav_item_text_fadeIn
+						}
+					>
+						ABOUT
+					</p>
+					<p
+						className={
+							(about || films) && !showFilm1
+								? styles.nav_item_text_fadeIn
+								: styles.nav_item_text_fadeOut
+						}
+					>
+						CLOSE
+					</p>
 				</div>
 			</nav>
 		</>
