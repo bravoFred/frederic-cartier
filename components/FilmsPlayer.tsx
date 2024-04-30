@@ -6,7 +6,7 @@ import InputContext from '@/store/inputContext';
 import { useContext, useEffect } from 'react';
 type props = {
 	show: boolean;
-	poster: string;
+	poster?: string;
 	playbackID: string;
 	title: string;
 	description: string;
@@ -21,9 +21,17 @@ export default function FilmsPlayer({ show, title, description, team, playbackID
 		} else {
 			setTimeout(() => {
 				setShowPlayer(false);
+				setTimeout(() => {
+					setShowPlayer(true);
+				}, 100);
 			}, 1000);
 		}
 	}, [showFilm1, showFilm2]);
+	// const img = new Image();
+	// img.src = poster;
+	// const posterWidth = img.width;
+	// const posterHeight = img.height;
+	// const posterRatio = posterWidth / posterHeight;
 	return (
 		<div className={show ? styles.video : styles.video_hidden}>
 			<div className={styles.player_wrapper}>
@@ -31,7 +39,7 @@ export default function FilmsPlayer({ show, title, description, team, playbackID
 					<MuxPlayer
 						className={styles.video_player}
 						playbackId={playbackID}
-						thumbnailTime={80}
+						thumbnailTime={24}
 						poster={poster}
 						accent-color="#1a1a1a"
 					/>

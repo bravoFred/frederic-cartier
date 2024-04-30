@@ -136,7 +136,7 @@ export default function App() {
 				title={filmsData[0].title}
 				description={filmsData[0].description}
 				team={filmsData[0].team}
-				poster={filmsData[0].poster}
+				// poster={filmsData[0].poster}
 				playbackID={filmsData[0].playbackId}
 			/>
 			<FilmsPlayer
