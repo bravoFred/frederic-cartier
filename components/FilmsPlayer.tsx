@@ -41,7 +41,8 @@ export default function FilmsPlayer({ show, title, description, team, playbackID
 						playbackId={playbackID}
 						thumbnailTime={24}
 						poster={poster}
-						accent-color="#1a1a1a"
+						// accent-color="#1a1a1a"
+						accent-color={'transparent'}
 					/>
 				)}
 				<div className={styles.video_details}>
