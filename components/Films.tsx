@@ -62,10 +62,10 @@ export default function App() {
 			document.removeEventListener('mousemove', handleMouseMove);
 		};
 	}, []);
-	const poster1 =
-		'https://image.mux.com/7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA/thumbnail.png?width=1280&height=720&time=5';
-	const poster2 =
-		'https://pub-b939a725b21a4ff0aeb386a49caa581c.r2.dev/images%2Flab%2Fdesktop.png';
+	// const poster1 =
+	// 	'https://image.mux.com/7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA/thumbnail.png?width=1280&height=720&time=5';
+	// const poster2 =
+	// 	'https://pub-b939a725b21a4ff0aeb386a49caa581c.r2.dev/images%2Flab%2Fdesktop.png';
 
 	return (
 		<>
@@ -136,12 +136,16 @@ export default function App() {
 				title={filmsData[0].title}
 				description={filmsData[0].description}
 				team={filmsData[0].team}
+				poster={filmsData[0].poster}
+				playbackID={filmsData[0].playbackId}
 			/>
 			<FilmsPlayer
 				show={showFilm2}
 				title={filmsData[1].title}
 				description={filmsData[1].description}
 				team={filmsData[1].team}
+				playbackID={filmsData[1].playbackId}
+				poster={filmsData[1].poster}
 			/>
 		</>
 	);

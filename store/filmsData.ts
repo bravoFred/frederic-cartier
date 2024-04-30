@@ -14,7 +14,6 @@ const data = [
 		title: 'Zoe: Hard To The Bone',
 		id: 'film1',
 		description: `Coming soon.`,
-		url: 'https://www.youtube.com/@tomtacular',
 		// playbackId: 'Mi5p7ncpuEh6BT6epoEd026jOxyOKmebgategcY54nb4',
 		playbackId: '7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA',
 		poster: poster1,
@@ -29,8 +28,7 @@ const data = [
 		title: 'Untitled',
 		id: 'film2',
 		description: `Coming soon.`,
-		url: 'https://www.youtube.com/@tomtacular',
-		playbackId: '7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA',
+		playbackId: 'Z02jB9U02RidvUlvJPTfSLC5v7S8hqavJmSGMQtO49EQI',
 		poster: poster2,
 		team: [
 			{

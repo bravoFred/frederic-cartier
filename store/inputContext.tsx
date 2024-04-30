@@ -74,21 +74,18 @@ export function InputContextProvider(props) {
 	}
 	useEffect(() => {
 		function handleEscape(event) {
-			if (event.key === 'Escape') {
-				goToHome();
-			}
+			if (event.key === 'Escape') goToHome();
 		}
 		function handleKey1(event) {
 			if (event.key === '1') {
-				console.log('1');
-				goToFilms();
+				setAbout(false);
+				setFilms(true);
 			}
 		}
 		function handleKey2(event) {
 			if (event.key === '2') {
-				console.log('2');
-
-				goToAbout();
+				setFilms(false);
+				setAbout(true);
 			}
 		}
 		document.addEventListener('keydown', handleEscape);

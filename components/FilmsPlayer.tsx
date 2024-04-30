@@ -6,11 +6,13 @@ import MuxPlayer from '@mux/mux-player-react';
 // const poster2 = 'https://pub-b939a725b21a4ff0aeb386a49caa581c.r2.dev/images%2Flab%2Fdesktop.png';
 type props = {
 	show: boolean;
-	title?: string;
-	description?: string;
-	team?: { name: string; role: string }[];
+	poster: string;
+	playbackID: string;
+	title: string;
+	description: string;
+	team: { name: string; role: string }[];
 };
-export default function FilmsPlayer({ show, title, description, team }: props) {
+export default function FilmsPlayer({ show, title, description, team, playbackID, poster }: props) {
 	const poster1 =
 		'https://image.mux.com/7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA/thumbnail.png?width=3840&height=2160&time=5';
 	const playbackID1 = `7xrhPwu5KDJWVUm1Jfnu977l98w002mwNzXGJ01vwDNdA`;
@@ -19,8 +21,10 @@ export default function FilmsPlayer({ show, title, description, team }: props) {
 			<div className={styles.player_wrapper}>
 				<MuxPlayer
 					className={styles.video_player}
-					playbackId={playbackID1}
+					// playbackId={playbackID1}
+					playbackId={playbackID}
 					thumbnailTime={80}
+					// poster={poster}
 					poster={poster1}
 					accent-color="#1a1a1a"
 				/>
